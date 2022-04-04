@@ -1,0 +1,75 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(rvest)
+```
+
+## Download
+2022 and 2021 data: https://www.nrmp.org/wp-content/uploads/2022/03/Advance-Data-Tables-2022-FINAL.pdf
+Archival data: https://www.nrmp.org/match-data-analytics/archives/
+```{r}
+page <- read_html('https://www.nrmp.org/match-data-analytics/archives/')
+page
+```
+
+```{r}
+link_url <- page %>% 
+  rvest::html_nodes("a") %>%
+  rvest::html_attr("href")
+
+link_url
+```
+
+
+```{r}
+link_text <- page %>% 
+  rvest::html_nodes("a") %>%
+  rvest::html_text()
+
+link_text
+```
+### Extract PDF files and sort
+```{r}
+link_table <- tibble(text = link_text,
+                     url = link_url,
+                     file = basename(url),
+                     content = str_remove_all(file, '.pdf|-|_') %>% tolower(),
+                     year = parse_number(content) %>% str_extract("^\\d{4}") %>% as.integer(),
+                     type = case_when(
+                       str_detect(content, 'sms') ~ 'Specialty Matching Service',
+                       str_detect(content, 'state') ~ 'State',
+                       str_detect(content, 'specialty') ~ 'Specialty',
+                       str_detect(content, 'program') ~ 'Program',
+                       str_detect(content, 'data') ~ 'Results and Data',
+                       NA ~ 'Other'
+                     )) %>% 
+  select(file, content, type, year, url, text)
+
+link_table
+```
+
+```{r}
+pdf_table <- link_table %>% 
+  filter(str_detect(file, '.pdf')) %>% 
+  arrange(year)
+pdf_table
+```
+
+```{r}
+download_subset <- pdf_table %>% 
+  filter(type == 'Results and Data',
+         str_detect(url, 'uploads/202[12]'))
+
+download_subset
+```
+
+```{r}
+download.file(url = download_subset$url,
+              destfile = paste0('../../data/original/', download_subset$year, '.pdf'))
+```
+

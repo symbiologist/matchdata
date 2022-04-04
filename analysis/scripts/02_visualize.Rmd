@@ -1,0 +1,80 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(plotly)
+library(rcartocolor)
+```
+
+```{r}
+merged <- read_tsv('../output/merged_table.tsv')
+```
+
+```{r}
+merged %>% 
+  filter(Specialty == 'Dermatology') 
+```
+
+```{r}
+long_table_absolute <- merged %>% 
+  select(Specialty,
+         Year,
+         Class,
+         `Positions Offered`,
+         `MD Senior Applicants`,
+         `Total Applicants`,
+         `MD Senior Matches`,
+         `Total Matches`) %>% 
+  pivot_longer(cols = -c(Specialty, Year, Class),
+               names_to = 'Name',
+               values_to = 'Value') %>% 
+  arrange(Specialty, Class, Year)
+
+long_table_absolute
+```
+```{r}
+long_table_percent <-  merged %>% 
+  select(Specialty,
+         Year,
+         Class, 
+         `MD Senior % Filled`,
+         `Total % Filled`) %>% 
+  pivot_longer(cols = -c(Specialty, Year, Class),
+               names_to = 'Name',
+               values_to = 'Value') %>% 
+  arrange(Specialty, Class, Year)
+
+long_table_percent 
+```
+
+```{r}
+p <- long_table_absolute %>% 
+  #filter(Specialty == 'Dermatology') %>% 
+  ggplot(aes(x = Year,
+             y = Value,
+             color = Name)) +
+  geom_point() +
+  geom_line() + 
+  facet_wrap(~Specialty + Class, scales = 'free_y') +
+  theme_bw() +
+  scale_color_carto_d(palette = 'Bold') 
+
+p
+```
+
+```{r}
+input_data <- merged %>% filter(Specialty == 'Dermatology',
+                                Class == 'PGY2')#long_table_absolute %>% filter(Specialty == 'Dermatology')
+
+fig <- plot_ly(input_data, x = ~Year)
+fig <- fig %>% add_trace(y = ~`Positions Offered`, name = 'Positions Offered', mode = 'lines+markers')
+fig <- fig %>% add_trace(y = ~`MD Senior Applicants`, name = 'MD Senior Applicants', mode = 'lines+markers')
+fig <- fig %>% add_trace(y = ~`Total Applicants`, name = 'Total Applicants', mode = 'lines+markers')
+
+fig
+```
+

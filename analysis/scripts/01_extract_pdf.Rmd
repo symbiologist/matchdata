@@ -1,0 +1,99 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+
+#remotes::install_github(c("ropensci/tabulizerjars", "ropensci/tabulizer"))
+library(tabulizer)
+```
+
+```{r}
+files <- list.files('../../data/extracted', full.names = TRUE) %>% set_names(basename(.) %>% str_remove('.pdf'))
+files
+```
+
+
+```{r}
+area <- extract_areas(files[1])
+```
+
+```{r}
+area
+```
+
+```{r}
+extracted <- map(files, function(i) {
+  extract_tables(i, 
+                 #pages = 2,
+                 output = 'data.frame')
+})
+extracted
+```
+
+```{r}
+column_names <- c('Specialty',
+                  'No. of Programs',
+                  'Positions Offered',
+                  'Unfilled Programs',
+                  'MD Senior Applicants',
+                  'Total Applicants',
+                  'MD Senior Matches',
+                  'Total Matches',
+                  'MD Senior % Filled',
+                  'Total % Filled',
+                  'MD Senior Ranked Positions',
+                  'Total Ranked Positions')
+```
+
+
+```{r}
+clean_table <- function(input_table, 
+                        first_row = 'Anesthesiology',
+                        last_row = 'Total') {
+  
+  no_header <- input_table[-(1:5), ] %>% as_tibble()
+  
+  clean <- no_header %>% 
+    unite('data', -1) %>%
+    mutate(data = str_remove_all(data, ',')) %>% 
+    separate('data', into = column_names[-1])
+  
+  colnames(clean) <- column_names
+
+  top_row <- min(which(str_starts(clean$Specialty, first_row)))
+  bot_row <- min(which(str_starts(clean$Specialty, last_row))) - 1
+  
+  clean %>% 
+    .[top_row:bot_row, ]
+                        }
+```
+
+```{r}
+merged <- map(1:length(extracted), function(i) {
+  
+  data_subset <- extracted[[i]]
+  year <- names(extracted)[i]
+  
+  pgy1 <- clean_table(data_subset[[1]]) %>% mutate(Year = year, Class = 'PGY1')
+  pgy2 <- clean_table(data_subset[[2]]) %>% mutate(Year = year, Class = 'PGY2')
+  
+  bind_rows(pgy1,
+            pgy2)
+  
+}) %>% bind_rows()
+
+merged
+```
+```{r}
+merged %>% 
+  filter(Specialty == 'Dermatology') 
+  
+```
+```{r}
+merged %>% write_tsv('../output/merged_table.tsv')
+```
+

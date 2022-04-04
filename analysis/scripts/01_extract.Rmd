@@ -1,0 +1,61 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+files <- list.files('../../data/extracted', full.names = TRUE) %>% set_names(basename(.) %>% str_remove('.csv'))
+files
+```
+
+
+```{r}
+column_names <- c('Specialty',
+                  'No. of Programs',
+                  'Positions Offered',
+                  'Unfilled Programs',
+                  'MD Senior Applicants',
+                  'Total Applicants',
+                  'MD Senior Matches',
+                  'Total Matches',
+                  'MD Senior % Filled',
+                  'Total % Filled',
+                  'MD Senior Ranked Positions',
+                  'Total Ranked Positions')
+
+merged <- map(files, function(i) {
+  dataset <- names(files)[files == i] %>% str_split(' - ') %>% unlist()
+  
+  read_csv(i, skip = 3, col_names = column_names) %>% 
+    mutate(Year = dataset[1],
+           Class = dataset[2]) %>% 
+    filter(!str_starts(Specialty, 'Total')) %>% 
+    mutate(across(everything(), as.character))
+}) %>% bind_rows()
+
+merged
+```
+
+```{r}
+merged %>% 
+  group_by(Year, Class) %>% 
+  tally() %>% 
+  pivot_wider(names_from = Class,
+              values_from = n)
+```
+
+
+```{r}
+merged %>% 
+  filter(Specialty == 'Dermatology') 
+  
+```
+```{r}
+merged %>% write_tsv('../output/merged_table.tsv')
+```
+

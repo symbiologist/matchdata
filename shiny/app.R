@@ -9,7 +9,7 @@
 
 library(shiny)
 library(tidyverse)
-library(plotly)
+library(ggiraph)
 source('themes.R')
 
 # Load files
@@ -27,7 +27,7 @@ ui <- fluidPage(
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
-        sidebarPanel(
+        sidebarPanel(width = 4,
             selectInput(inputId = 'specialty',
                         label = 'Specialty',
                         choices = specialties, 
@@ -41,8 +41,8 @@ ui <- fluidPage(
         ),
 
         # Show a plot of the generated distribution
-        mainPanel(
-           plotlyOutput("plot_match_abs")
+        mainPanel(width = 8,
+           girafeOutput("plot_match_abs")
         )
     )
 )
@@ -52,26 +52,28 @@ server <- function(input, output) {
   
 
   
-  output$plot_match_abs <- renderPlotly({
+  output$plot_match_abs <- renderGirafe({
     
     p <- long_table_absolute %>% 
       filter(Specialty %in% input$specialty,
              Class == input$pgy) %>% 
       ggplot(aes(x = Year,
                  y = Value,
-                 color = Name)) +
-      geom_point(size = 4, alpha = 1) +
+                 color = Name,
+                 data_id = Name,
+                 tooltip = Value)) +
+      geom_point_interactive(size = 4, alpha = 1) +
       geom_line(size = 2, alpha = 0.8) + 
       scale_x_continuous(breaks = years) +
       scale_color_carto_d(palette = 'Bold') +
       labs(y = 'Number') +
-      theme_custom()
+      theme_custom(legend_position = 'none')
     
     if(length(input$specialty) > 1) {
       p <- p + facet_wrap(~Specialty, scales = 'free_y', ncol = 1 )
     }
     
-    ggplotly(p)
+    girafe(ggobj = p)
   })
   
   

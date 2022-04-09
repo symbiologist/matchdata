@@ -75,6 +75,28 @@ fig <- fig %>% add_trace(y = ~`Positions Offered`, name = 'Positions Offered', m
 fig <- fig %>% add_trace(y = ~`MD Senior Applicants`, name = 'MD Senior Applicants', mode = 'lines+markers')
 fig <- fig %>% add_trace(y = ~`Total Applicants`, name = 'Total Applicants', mode = 'lines+markers')
 
-fig
+fig %>%
+  layout(                        # all of layout's properties: /r/reference/#layout
+    title = "Unemployment", # layout's title: /r/reference/#layout-title
+    xaxis = list(           # layout's xaxis is a named list. List of valid keys: /r/reference/#layout-xaxis
+      title = "Time",      # xaxis's title: /r/reference/#layout-xaxis-title
+      showgrid = F),       # xaxis's showgrid: /r/reference/#layout-xaxis-showgrid
+    yaxis = list(           # layout's yaxis is a named list. List of valid keys: /r/reference/#layout-yaxis
+      title = "uidx")     # yaxis's title: /r/reference/#layout-yaxis-title
+  )
+```
+```{r}
+p <- long_table_absolute %>% 
+  filter(Specialty == 'Dermatology') %>% 
+  ggplot(aes(x = Year,
+             y = Value,
+             color = Name)) +
+  geom_point() +
+  geom_line() + 
+  facet_wrap(~Specialty + Class, scales = 'free_y') +
+  theme_bw() +
+  scale_color_carto_d(palette = 'Bold') 
+
+ggplotly(p)
 ```
 

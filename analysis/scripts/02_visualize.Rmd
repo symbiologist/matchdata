@@ -53,7 +53,7 @@ long_table_percent
 
 ```{r}
 p <- long_table_absolute %>% 
-  #filter(Specialty == 'Dermatology') %>% 
+  filter(Specialty == 'Dermatology', Class == 'PGY2') %>% 
   ggplot(aes(x = Year,
              y = Value,
              color = Name)) +
@@ -67,17 +67,18 @@ p
 ```
 
 ```{r}
-input_data <- merged %>% filter(Specialty == 'Dermatology',
+input <- 'Dermatology'
+plot_data <- merged %>% filter(Specialty == input,
                                 Class == 'PGY2')#long_table_absolute %>% filter(Specialty == 'Dermatology')
 
-fig <- plot_ly(input_data, x = ~Year)
+fig <- plot_ly(plot_data, x = ~Year)
 fig <- fig %>% add_trace(y = ~`Positions Offered`, name = 'Positions Offered', mode = 'lines+markers')
 fig <- fig %>% add_trace(y = ~`MD Senior Applicants`, name = 'MD Senior Applicants', mode = 'lines+markers')
 fig <- fig %>% add_trace(y = ~`Total Applicants`, name = 'Total Applicants', mode = 'lines+markers')
 
 fig %>%
   layout(                        # all of layout's properties: /r/reference/#layout
-    title = "Unemployment", # layout's title: /r/reference/#layout-title
+    title = input, # layout's title: /r/reference/#layout-title
     xaxis = list(           # layout's xaxis is a named list. List of valid keys: /r/reference/#layout-xaxis
       title = "Time",      # xaxis's title: /r/reference/#layout-xaxis-title
       showgrid = F),       # xaxis's showgrid: /r/reference/#layout-xaxis-showgrid
@@ -98,5 +99,11 @@ p <- long_table_absolute %>%
   scale_color_carto_d(palette = 'Bold') 
 
 ggplotly(p)
+```
+
+### Export
+```{r}
+long_table_absolute %>% write_tsv('../../analysis/output/long_table_absolute.tsv')
+long_table_percent %>% write_tsv('../../analysis/output/long_table_percent.tsv')
 ```
 

@@ -31,11 +31,12 @@ column_names <- c('Specialty',
 merged <- map(files, function(i) {
   dataset <- names(files)[files == i] %>% str_split(' - ') %>% unlist()
   
-  read_csv(i, skip = 3, col_names = column_names) %>% 
+  read_csv(i, col_names = column_names) %>% 
     mutate(Year = dataset[1],
            Class = dataset[2]) %>% 
-    filter(!str_starts(Specialty, 'Total')) %>% 
-    mutate(across(everything(), as.character))
+    filter(!str_starts(Specialty, 'Total|Specialty')) %>% 
+    mutate(across(everything(), as.character)) %>% 
+    drop_na()
 }) %>% bind_rows()
 
 merged
@@ -52,7 +53,7 @@ merged %>%
 
 ```{r}
 merged %>% 
-  filter(Specialty == 'Dermatology') 
+  filter(Specialty == 'Dermatology') %>% arrange(Year) 
   
 ```
 ```{r}

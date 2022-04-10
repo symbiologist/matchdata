@@ -124,7 +124,6 @@ full_table <- processed %>% left_join(delta1_table) %>% left_join(delta1_pct_tab
 full_table
 ```
 
-
 ### Long tables
 ```{r}
 all_cols <- colnames(full_table)
@@ -144,7 +143,7 @@ long_table_absolute
 ```
 ```{r}
 long_table_percent <- full_table %>% 
-  select(all_of(c(metadata_cols, absolute_cols))) %>% 
+  select(all_of(c(metadata_cols, percent_cols))) %>% 
   pivot_longer(cols = -c(Specialty, Year, Class),
                names_to = 'Name',
                values_to = 'Value') %>% 
@@ -152,10 +151,29 @@ long_table_percent <- full_table %>%
 
 long_table_percent 
 ```
+
+### Match rate table
+```{r}
+match_rate_table <- long_table_percent %>% 
+  filter(str_detect(Name, 'Rate'))
+
+match_rate_table
+```
+
+
+```{r}
+full_table %>% 
+  filter(Year == '2022',
+         Class == Predominance,
+         `Positions Offered` > 100) %>% 
+  
+  arrange(`U.S. Senior Match Rate %`) 
+```
 ## Export
 ```{r}
 full_table %>% write_tsv('../output/full_table.tsv')
 pgy_table %>% write_tsv('../output/pgy_table.tsv')
+match_rate_table %>% write_tsv('../output/match_rate_table.tsv')
 combined_delta_table %>% write_tsv('../output/combined_delta_table.tsv')
 long_table_absolute %>% write_tsv('../output/long_table_absolute.tsv')
 long_table_percent %>% write_tsv('../output/long_table_percent.tsv')

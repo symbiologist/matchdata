@@ -3,50 +3,50 @@ Specialty,No. of Programs,Positions Offered,Unfilled Programs,MD Seniors,Total,M
 PGY- 1 Positions,,,,,,,,,,,
 Anesthesiology,165,"1,509",1,"1,489","2,691","1,054","1,508",69.8,99.9,"15,846","22,181"
 Child Neurology,75,166,14,118,231,102,150,61.4,90.4,"1,588","2,198"
-Dermatology,14,30,1,240,302,24,28,80.0,93.3,342,440
+Dermatology,14,30,1,240,302,24,28,80,93.3,342,440
 Emergency Medicine,277,"2,921",69,"1,695","3,081","1,593","2,702",54.5,92.5,"24,562","38,174"
-Emergency Med-Anesthesiology,1,2,0,3,6,1,2,50.0,100.0,3,6
-Emergency Med-Family Med,3,7,0,17,38,4,7,57.1,100.0,23,52
+Emergency Med-Anesthesiology,1,2,0,3,6,1,2,50,100,3,6
+Emergency Med-Family Med,3,7,0,17,38,4,7,57.1,100,23,52
 Family Medicine,745,"4,916",176,"1,789","7,425","1,541","4,451",31.3,90.5,"22,939","63,480"
-Family Med-Preventive Med,2,2,0,9,22,0,2,0.0,100.0,9,23
-Internal Medicine (Categorical),641,"9,380",91,"4,120","13,844","3,491","8,915",37.2,95.0,"52,100","13,873"
-Medicine-Anesthesiology,2,3,0,15,20,2,3,66.7,100.0,15,20
-Medicine-Dermatology,5,8,0,34,42,7,8,87.5,100.0,63,76
-Medicine-Emergency Med,12,31,0,72,120,22,31,71.0,100.0,347,489
-Medicine-Medical Genetics,5,5,2,9,17,3,3,60.0,60.0,18,28
-Medicine-Pediatrics,78,392,0,403,587,332,392,84.7,100.0,"4,666","5,468"
+Family Med-Preventive Med,2,2,0,9,22,0,2,0,100,9,23
+Internal Medicine (Categorical),641,"9,380",91,"4,120","13,844","3,491","8,915",37.2,95,"52,100","113,873"
+Medicine-Anesthesiology,2,3,0,15,20,2,3,66.7,100,15,20
+Medicine-Dermatology,5,8,0,34,42,7,8,87.5,100,63,76
+Medicine-Emergency Med,12,31,0,72,120,22,31,71,100,347,489
+Medicine-Medical Genetics,5,5,2,9,17,3,3,60,60,18,28
+Medicine-Pediatrics,78,392,0,403,587,332,392,84.7,100,"4,666","5,468"
 Medicine-Preliminary (PGY-1 Only),353,"1,774",52,"3,644","5,804","1,261","1,624",71.1,91.5,"56,793","70,290"
-Medicine-Preventive Med,4,8,0,31,108,5,8,62.5,100.0,33,116
+Medicine-Preventive Med,4,8,0,31,108,5,8,62.5,100,33,116
 Medicine-Primary,86,429,3,851,"2,382",248,424,57.8,98.8,"3,168","5,241"
-Medicine-Psychiatry,12,24,0,63,95,20,24,83.3,100.0,258,317
-Interventional Radiology (Integrated),24,45,0,174,246,37,45,82.2,100.0,703,885
-Neurodevelopmental Disabilities,4,5,0,18,27,3,5,60.0,100.0,42,56
-Neurological Surgery,115,240,0,275,391,202,240,84.2,100.0,"4,361","4,955"
+Medicine-Psychiatry,12,24,0,63,95,20,24,83.3,100,258,317
+Interventional Radiology (Integrated),24,45,0,174,246,37,45,82.2,100,703,885
+Neurodevelopmental Disabilities,4,5,0,18,27,3,5,60,100,42,56
+Neurological Surgery,115,240,0,275,391,202,240,84.2,100,"4,361","4,955"
 Neurology,139,772,7,593,"1,463",393,761,50.9,98.6,"6,110","10,576"
 Obstetrics-Gynecology,288,"1,503",3,"1,358","2,161","1,106","1,499",73.6,99.7,"15,778","21,035"
-OB/GYN-Preliminary (PGY-1 Only),15,18,6,99,169,4,9,22.2,50.0,141,236
-Orthopedic Surgery,210,875,0,"1,086","1,470",705,875,80.6,100.0,"10,613","12,588"
-Osteo Neuromusculoskeletal Med,5,16,2,0,23,0,13,0.0,81.3,0,53
-Otolaryngology,134,361,0,463,574,316,361,87.5,100.0,"5,276","5,855"
+OB/GYN-Preliminary (PGY-1 Only),15,18,6,99,169,4,9,22.2,50,141,236
+Orthopedic Surgery,210,875,0,"1,086","1,470",705,875,80.6,100,"10,613","12,588"
+Osteo Neuromusculoskeletal Med,5,16,2,0,23,0,13,0,81.3,0,53
+Otolaryngology,134,361,0,463,574,316,361,87.5,100,"5,276","5,855"
 Pathology,168,631,10,248,994,231,619,36.6,98.1,"2,924","8,135"
 Pediatrics (Categorical),235,"2,942",28,"1,871","3,824","1,661","2,861",56.5,97.2,"25,389","39,475"
-Pediatrics-Anesthesiology,5,6,0,16,20,6,6,100.0,100.0,34,46
-Pediatrics-Emergency Med,4,9,0,25,34,6,9,66.7,100.0,65,85
-Pediatrics-Medical Genetics,23,30,2,23,50,18,28,60.0,93.3,177,261
-Pediatrics-PM& R,3,3,0,12,14,3,3,100.0,100.0,26,30
+Pediatrics-Anesthesiology,5,6,0,16,20,6,6,100,100,34,46
+Pediatrics-Emergency Med,4,9,0,25,34,6,9,66.7,100,65,85
+Pediatrics-Medical Genetics,23,30,2,23,50,18,28,60,93.3,177,261
+Pediatrics-P M & R,3,3,0,12,14,3,3,100,100,26,30
 Pediatrics-Preliminary,18,23,2,88,135,16,21,69.6,91.3,499,575
 Pediatrics-Primary,14,74,1,289,646,31,73,41.9,98.6,453,876
-Peds/Psych/Child Psych,8,21,0,51,62,20,21,95.2,100.0,186,201
-Physical Medicine & Rehab,43,180,0,317,701,104,180,57.8,100.0,"1,544","2,842"
-Plastic Surgery (Integrated),86,194,0,281,351,173,194,89.2,100.0,"2,924","3,137"
+Peds/Psych/Child Psych,8,21,0,51,62,20,21,95.2,100,186,201
+Physical Medicine & Rehab,43,180,0,317,701,104,180,57.8,100,"1,544","2,842"
+Plastic Surgery (Integrated),86,194,0,281,351,173,194,89.2,100,"2,924","3,137"
 Psychiatry,352,"2,047",11,"1,437","2,908","1,253","2,030",61.2,99.2,"16,232","24,942"
-Psychiatry-Family Medicine,6,10,0,44,59,10,10,100.0,100.0,109,131
-Psychiatry-Neurology,4,4,1,16,25,2,3,50.0,75.0,29,44
-Radiation Oncology,5,10,1,82,108,7,9,70.0,90.0,114,161
-Radiology-Diagnostic,34,132,0,716,"1,156",73,132,55.3,100.0,"1,719","2,780"
+Psychiatry-Family Medicine,6,10,0,44,59,10,10,100,100,109,131
+Psychiatry-Neurology,4,4,1,16,25,2,3,50,75,29,44
+Radiation Oncology,5,10,1,82,108,7,9,70,90,114,161
+Radiology-Diagnostic,34,132,0,716,"1,156",73,132,55.3,100,"1,719","2,780"
 Surgery (Categorical),342,"1,622",3,"1,467","3,071","1,059","1,619",65.3,99.8,"17,477","25,462"
-Surgery-Preliminary (PGY-1 Only),251,"1,150",142,"1,008","2,077",304,632,26.4,55.0,"6,905","10,799"
-Thoracic Surgery,35,47,0,76,111,41,47,87.2,100.0,804,949
+Surgery-Preliminary (PGY-1 Only),251,"1,150",142,"1,008","2,077",304,632,26.4,55,"6,905","10,799"
+Thoracic Surgery,35,47,0,76,111,41,47,87.2,100,804,949
 Transitional (PGY-1 Only),195,"1,616",44,"2,729","4,472",920,"1,404",56.9,86.9,"33,476","47,071"
-Vascular Surgery,68,84,0,100,168,72,84,85.7,100.0,"1,895","2,190"
-Total PGY- 1,"5,313","36,277",672,"29,564","64,325","18,486","34,075",51.0,93.9,"338,778","548,903"
+Vascular Surgery,68,84,0,100,168,72,84,85.7,100,"1,895","2,190"
+Total PGY- 1,"5,313","36,277",672,"29,564","64,325","18,486","34,075",51,93.9,"338,778","548,903"

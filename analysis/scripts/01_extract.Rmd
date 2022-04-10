@@ -19,25 +19,37 @@ column_names <- c('Specialty',
                   'No. of Programs',
                   'Positions Offered',
                   'Unfilled Programs',
-                  'MD Senior Applicants',
+                  'U.S. Senior Applicants',
                   'Total Applicants',
-                  'MD Senior Matches',
+                  'U.S. Senior Matches',
                   'Total Matches',
-                  'MD Senior % Filled',
+                  'U.S. Senior % Filled',
                   'Total % Filled',
-                  'MD Senior Ranked Positions',
+                  'U.S. Senior Ranked Positions',
                   'Total Ranked Positions')
 
 merged <- map(files, function(i) {
   dataset <- names(files)[files == i] %>% str_split(' - ') %>% unlist()
   
   read_csv(i, col_names = column_names) %>% 
-    mutate(Year = dataset[1],
-           Class = dataset[2]) %>% 
     filter(!str_starts(Specialty, 'Total|Specialty')) %>% 
-    mutate(across(everything(), as.character)) %>% 
-    drop_na()
-}) %>% bind_rows()
+    drop_na() %>% 
+    mutate(across(everything(), str_remove, pattern = ',')) %>% 
+    mutate(across(!Specialty, as.numeric)) %>% 
+    mutate(Year = dataset[1],
+           Class = dataset[2])
+    
+}) %>% 
+  bind_rows() %>% 
+  select(Specialty, Class, Year, everything())
+
+## Fix certain Specialty names
+merged <- merged %>% 
+  mutate(Specialty = case_when(
+    Specialty == 'Psychiatry' & Class == 'PGY1' ~ 'Psychiatry (Categorical)',
+    Specialty == 'Pediatrics-Prelim (PGY-1 Only)' ~ 'Pediatrics-Preliminary',
+    TRUE ~ Specialty
+  ))
 
 merged
 ```
@@ -56,44 +68,13 @@ merged %>%
   filter(Specialty == 'Dermatology') %>% arrange(Year) 
   
 ```
-### Long tables
-```{r}
-long_table_absolute <- merged %>% 
-  select(Specialty,
-         Year,
-         Class,
-         `Positions Offered`,
-         `MD Senior Applicants`,
-         `Total Applicants`,
-         `MD Senior Matches`,
-         `Total Matches`) %>% 
-  pivot_longer(cols = -c(Specialty, Year, Class),
-               names_to = 'Name',
-               values_to = 'Value') %>% 
-  arrange(Specialty, Class, Year)
 
-long_table_absolute
-```
-```{r}
-long_table_percent <-  merged %>% 
-  select(Specialty,
-         Year,
-         Class, 
-         `MD Senior % Filled`,
-         `Total % Filled`) %>% 
-  pivot_longer(cols = -c(Specialty, Year, Class),
-               names_to = 'Name',
-               values_to = 'Value') %>% 
-  arrange(Specialty, Class, Year)
-
-long_table_percent 
-```
-
-
-### Export
+## Export
 ```{r}
 merged %>% write_tsv('../output/merged_table.tsv')
-long_table_absolute %>% write_tsv('../output/long_table_absolute.tsv')
-long_table_percent %>% write_tsv('../output/long_table_percent.tsv')
 ```
 
+## Session info
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,146 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(plotly)
+library(rcartocolor)
+library(ggiraph)
+library(ggforce)
+```
+
+```{r}
+full_table <- read_tsv('../output/full_table.tsv')
+combined_delta_table <- read_tsv('../output/combined_delta_table.tsv')
+long_table_absolute <- read_tsv('../output/long_table_absolute.tsv')
+long_table_percent <- read_tsv('../output/long_table_percent.tsv')
+```
+
+```{r}
+p <- long_table_absolute %>% 
+  filter(Specialty == 'Dermatology', Class == 'PGY2') %>% 
+  ggplot(aes(x = Year,
+             y = Value,
+             color = Name,
+             data_id = Name,
+             tooltip = Value)) +
+  geom_point_interactive() +
+  geom_line() + 
+  theme_bw() +
+  scale_color_carto_d(palette = 'Bold') 
+
+girafe(ggobj = p)
+```
+### Distribution
+```{r}
+transposed_table <- full_table %>% 
+  pivot_longer(cols = -c(Specialty, Class, Year),
+               names_to = 'Name',
+               values_to = 'Value') 
+  
+transposed_table
+```
+```{r fig.height = 20, fig.width=10}
+transposed_table %>% 
+  filter(!str_detect(Name, 'Change')) %>% 
+  #filter(Name == 'U.S. Senior Ranked Positions') %>% 
+  ggplot(aes(x = Value)) +
+  geom_histogram() + 
+  facet_wrap(~Name, scales = 'free', ncol = 3) +
+  scale_x_log10()
+```
+
+```{r fig.height=8, fig.width=10}
+transposed_table %>% 
+  #filter(Year == 2022) %>% 
+  filter(!str_detect(Name, 'Change')) %>% 
+  #filter(Name == 'U.S. Senior Ranked Positions') %>% 
+  ggplot(aes(x = Class,
+             y = Value)) +
+  geom_sina(alpha = 0.5,
+            size = 1) + 
+  facet_wrap(~Name, scales = 'free', ncol = 5) +
+  scale_y_log10()
+```
+
+```{r}
+p <- transposed_table %>% 
+  filter(str_detect(Name, c('Match Rate %')), !str_detect(Name, 'Change')) %>% 
+  ggplot(aes(x = Value)) +
+  geom_histogram(binwidth = 2) +
+  facet_wrap(~Name + Class, scales = 'free_y')
+
+p
+```
+```{r}
+full_table %>% 
+  filter(`Positions Offered` > 0) %>% 
+  group_by(Specialty, Class) %>% 
+  tally() %>% 
+  pivot_wider(names_from = Class,
+              values_from = n)
+  
+```
+
+```{r}
+pgy_tally %>% 
+  filter(Year == 2022) %>% 
+  pull(Category) %>% 
+  table()
+```
+
+```{r}
+pgy_tally %>% 
+  filter(Year == 2022,
+         Predominance != 'PGY1')
+```
+
+```{r}
+pgy_tally %>% 
+  filter(`% Predominance` < 100) %>% 
+  ggplot(aes(x = `% Predominance`)) +
+  geom_histogram(binwidth = 2)
+```
+
+### Competitive
+```{r}
+full_table %>% 
+  filter(Year == '2022',
+         `Positions Offered` > 100) %>% 
+  arrange(`Total Match Rate %`)
+```
+```{r}
+full_table %>% 
+  filter(Year == '2022',
+         Class == Predominance,
+         `Positions Offered` > 100) %>% 
+  select(Specialty, `Positions Offered`, `U.S. Senior Applicants`, `U.S. Senior Matches`, `U.S. Senior Match Rate %`, `Total Applicants`, `Total Matches`, `Total Match Rate %`) %>% 
+  arrange(`U.S. Senior Match Rate %`)
+```
+
+```{r}
+combined_delta_table %>% 
+  left_join(full_table %>% filter(Year == 2022) %>% select(Predominance, `Positions Offered`, Specialty)) %>% 
+  filter(Class == Predominance, `Positions Offered` > 100) %>% 
+  select(Specialty, Class, Timeframe, `% Change in U.S. Senior Match Rate %`, `% Change in Total Match Rate %`) %>% 
+  #arrange(`% Change in U.S. Senior Match Rate %`)
+  arrange(`% Change in Total Match Rate %`)
+```
+
+```{r}
+combined_delta_table %>% 
+  left_join(full_table %>% filter(Year == 2022) %>% select(Predominance, `Positions Offered`, Specialty)) %>% 
+  filter(Class == Predominance, `Positions Offered` > 100) %>% 
+  select(Specialty, Class, Timeframe, `% Change in U.S. Senior Applicants`, `% Change in Total Applicants`) %>% 
+  arrange(-`% Change in U.S. Senior Applicants`)
+  #arrange(-`% Change in Total Applicants`)
+```
+
+### Fastest Growing programs
+```{r}
+
+```
+

@@ -41,7 +41,7 @@ theme_custom <- function(base_size = 16,
           legend.spacing = unit(0, "cm"),
           legend.title = element_blank(),
           legend.position = legend_position,
-          legend.text = element_text(size = 16),
+          legend.text = element_text(size = 12),
           strip.background = element_rect(color="black",fill="#f0f0f0"),
           strip.text = element_text(face="plain", size = 14))
 }

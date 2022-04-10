@@ -1,0 +1,162 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+merged <- read_tsv('../output/merged_table.tsv')
+merged
+```
+
+```{r}
+delta <- function(x) {x - lag(x)}
+delta_pct <- function(x) {(x - lag(x)) / lag(x)}
+
+processed <- merged %>% 
+  mutate(`U.S. Senior Match Rate %` = round(100 * `U.S. Senior Matches`/`U.S. Senior Applicants`, 1),
+         `Total Match Rate %` = round(100 * `Total Matches`/`Total Applicants`, 1),
+        `U.S. Senior Average Ranked Programs` = round(`U.S. Senior Ranked Positions`/`U.S. Senior Applicants`, 1),
+        `Total Average Ranked Programs` = round(`Total Ranked Positions`/`Total Applicants`, 1)) %>% 
+  arrange(Specialty, Class, Year)
+
+processed
+```
+```{r}
+delta1_table <- processed %>% group_by(Specialty, Class) %>% mutate(across(!c(Year), delta))
+colnames(delta1_table)[-c(1:3)] <- paste('Change in', colnames(delta1_table[-c(1:3)]))
+delta1_table
+```
+```{r}
+delta1_pct_table <- processed %>% group_by(Specialty, Class) %>% 
+  mutate(across(!c(Year), delta_pct)) %>% 
+  mutate(across(!c(Year), function(i) {round(100 * i, 1) }))
+
+colnames(delta1_pct_table)[-c(1:3)] <- paste('% Change in', colnames(delta1_pct_table[-c(1:3)]))
+
+delta1_pct_table
+```
+## Long-term deltas
+```{r}
+delta5_table <- processed %>% 
+  filter(Year %in% c(max(Year), max(Year) - 5)) %>% 
+  group_by(Specialty, Class) %>% 
+  mutate(across(!c(Year), delta)) %>% 
+  filter(Year == max(Year))
+colnames(delta5_table)[-c(1:3)] <- paste('Change in', colnames(delta5_table[-c(1:3)]))
+delta5_table
+```
+```{r}
+delta5_pct_table <- processed %>% 
+  filter(Year %in% c(max(Year), max(Year) - 5)) %>% 
+  group_by(Specialty, Class) %>% 
+  mutate(across(!c(Year), delta)) %>% 
+  filter(Year == max(Year))
+colnames(delta5_pct_table)[-c(1:3)] <- paste('% Change in', colnames(delta5_pct_table[-c(1:3)]))
+delta5_pct_table
+```
+```{r}
+delta10_table <- processed %>% 
+  filter(Year %in% c(max(Year), max(Year) - 10)) %>% 
+  group_by(Specialty, Class) %>% 
+  mutate(across(!c(Year), delta)) %>% 
+  filter(Year == max(Year))
+colnames(delta10_table)[-c(1:3)] <- paste('Change in', colnames(delta10_table[-c(1:3)]))
+delta10_table
+```
+```{r}
+delta10_pct_table <- processed %>% 
+  filter(Year %in% c(max(Year), max(Year) - 10)) %>% 
+  group_by(Specialty, Class) %>% 
+  mutate(across(!c(Year), delta)) %>% 
+  filter(Year == max(Year))
+colnames(delta10_pct_table)[-c(1:3)] <- paste('% Change in', colnames(delta10_pct_table[-c(1:3)]))
+delta10_pct_table
+```
+### Delta summary
+```{r}
+combined_delta_table <- 
+  bind_rows(
+    left_join(delta1_table,
+              delta1_pct_table) %>% 
+      mutate(Timeframe = '1 Year') %>% 
+      filter(Year == max(Year)),
+    left_join(
+      delta5_table,
+      delta5_pct_table) %>% mutate(Timeframe = '5 Year'),
+    left_join(
+      delta10_table,
+      delta10_pct_table) %>% mutate(Timeframe = '10 Year')) %>% 
+  select(Specialty, Class, Timeframe, everything()) %>% 
+  select(-Year)
+
+combined_delta_table
+```
+
+### PGY table
+```{r}
+pgy_table <- merged %>% 
+  select(Specialty, Year, Class, `Positions Offered`) %>% 
+  pivot_wider(names_from = Class,
+              values_from = `Positions Offered`, values_fill = 0) %>% 
+  rowwise() %>% 
+  mutate(
+    'Total' = PGY1 + PGY2,
+    'Predominance' = ifelse(PGY1 > PGY2, 'PGY1', 'PGY2'),
+    'Margin' = abs(PGY1 - PGY2),
+    '% Predominance' = round(100 * max(PGY1, PGY2)/Total, 1),
+    'Exclusivity' = case_when(
+      `% Predominance` == 100 ~ 'Exclusive',
+      `% Predominance` >= 80 ~ 'Predominant',
+      `% Predominance` < 80 ~ 'Mixed'),
+    'Category' = paste(Predominance, Exclusivity))
+
+pgy_table
+```
+
+### Integrate all tables
+```{r}
+full_table <- processed %>% left_join(delta1_table) %>% left_join(delta1_pct_table) %>% left_join(pgy_table)
+full_table
+```
+
+
+### Long tables
+```{r}
+all_cols <- colnames(full_table)
+metadata_cols <- all_cols[1:3]
+pgy_cols <- colnames(pgy_table) %>% setdiff(metadata_cols)
+percent_cols <- all_cols %>% str_subset('%')
+absolute_cols <- all_cols %>% setdiff(metadata_cols) %>% setdiff(percent_cols) %>% setdiff(pgy_cols)
+
+long_table_absolute <- full_table %>% 
+  select(all_of(c(metadata_cols, absolute_cols))) %>% 
+  pivot_longer(cols = -c(Specialty, Year, Class),
+               names_to = 'Name',
+               values_to = 'Value') %>% 
+  arrange(Specialty, Class, Year)
+
+long_table_absolute
+```
+```{r}
+long_table_percent <- full_table %>% 
+  select(all_of(c(metadata_cols, absolute_cols))) %>% 
+  pivot_longer(cols = -c(Specialty, Year, Class),
+               names_to = 'Name',
+               values_to = 'Value') %>% 
+  arrange(Specialty, Class, Year)
+
+long_table_percent 
+```
+## Export
+```{r}
+full_table %>% write_tsv('../output/full_table.tsv')
+pgy_table %>% write_tsv('../output/pgy_table.tsv')
+combined_delta_table %>% write_tsv('../output/combined_delta_table.tsv')
+long_table_absolute %>% write_tsv('../output/long_table_absolute.tsv')
+long_table_percent %>% write_tsv('../output/long_table_percent.tsv')
+```

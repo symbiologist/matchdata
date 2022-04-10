@@ -13,11 +13,11 @@ library(ggiraph)
 source('themes.R')
 
 # Load files
-merged_table <- read_tsv('data/merged_table.tsv')
+full_table <- read_tsv('data/full_table.tsv')
 long_table_absolute <- read_tsv('data/long_table_absolute.tsv')
 long_table_percent <- read_tsv('data/long_table_percent.tsv')
-specialties <- merged_table$Specialty %>% unique()
-years <- unique(merged_table$Year)
+specialties <- full_table$Specialty %>% unique()
+years <- unique(full_table$Year)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -27,7 +27,7 @@ ui <- fluidPage(
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
-        sidebarPanel(width = 4,
+        sidebarPanel(width = 2,
             selectInput(inputId = 'specialty',
                         label = 'Specialty',
                         choices = specialties, 
@@ -50,13 +50,19 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
   
-
+  absolute_color_scale <- c('dodgerblue4',  'dodgerblue3', 'darkorchid4','darkorchid3', 'orange')
   
   output$plot_match_abs <- renderGirafe({
     
-    p <- long_table_absolute %>% 
+    p <- long_table_absolute %>%
       filter(Specialty %in% input$specialty,
-             Class == input$pgy) %>% 
+             Class == input$pgy,
+             !str_detect(Name, 'Change|Ranked|Programs')) %>% 
+      mutate(Name = factor(Name, levels = c('U.S. Senior Applicants',
+                                            'U.S. Senior Matches',
+                                            'Total Applicants',
+                                            'Total Matches',
+                                            'Positions Offered'))) %>% 
       ggplot(aes(x = Year,
                  y = Value,
                  color = Name,
@@ -65,18 +71,24 @@ server <- function(input, output) {
       geom_point_interactive(size = 4, alpha = 1) +
       geom_line(size = 2, alpha = 0.8) + 
       scale_x_continuous(breaks = years) +
-      scale_color_carto_d(palette = 'Bold') +
+      scale_color_manual(values = absolute_color_scale) +
       labs(y = 'Number') +
-      theme_custom(legend_position = 'none')
+      theme_custom(legend_position = 'top') +
+      guides(color=guide_legend(nrow = 2, byrow = FALSE))
     
     if(length(input$specialty) > 1) {
       p <- p + facet_wrap(~Specialty, scales = 'free_y', ncol = 1 )
     }
     
-    girafe(ggobj = p)
+    girafe(ggobj = p,
+           width_svg = 8,
+           height_svg = 5)
   })
   
-  
+  output$plot_competitive <- renderGirafe({
+    
+    p <- long_table_percent
+  })
 }
 
 # Run the application 

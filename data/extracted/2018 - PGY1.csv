@@ -1,6 +1,6 @@
-,,,,No. Applicants*,of,No.,of Matches*,,% Filled,Ranked Positions,
+,,,,No. Applicants*,of,No.,of Matches*,% Filled,,Ranked Positions,
 Specialty,No. of Programs,Positions Offered,Unfilled Programs,U.S. Seniors,Total,U.S. Seniors,Total,U.S. Seniors,Total,U.S. Seniors,Total
-PGY- 1 Positions,,,,,,,,,,,
+PGY-1 Positions,,,,,,,,,,,
 Anesthesiology,132,"1,253",9,"1,180","2,011",861,"1,226",68.7,97.8,"11,746","16,071"
 Child Neurology,68,134,5,113,192,101,129,75.4,96.3,"1,217","1,513"
 Dermatology,11,25,1,189,212,22,23,88.0,92.0,277,306
@@ -18,7 +18,7 @@ Medicine-Family Medicine,1,2,0,7,14,2,2,100.0,100.0,7,14
 Medicine-Medical Genetics,3,1,0,2,3,1,1,100.0,100.0,4,6
 Medicine-Pediatrics,77,382,5,374,580,306,377,80.1,98.7,"3,846","4,614"
 Medicine-Preliminary (PGY-1 Only),349,"1,883",47,"3,426","5,524","1,370","1,762",72.8,93.6,"52,881","65,611"
-Medicine-Preventive Med,3,6,0,29,79,4,6,66.7,100.0,31,84
+Medicine-Preventivel Med,3,6,0,29,79,4,6,66.7,100.0,31,84
 Medicine-Primary,69,374,1,763,"1,951",229,372,61.2,99.5,"2,772","4,345"
 Medicine-Psychiatry,12,24,0,48,88,20,24,83.3,100.0,166,248
 Interventional Radiology (Integrated),19,35,0,217,255,34,35,97.1,100.0,593,652
@@ -33,7 +33,7 @@ Otolaryngology,112,315,11,299,333,284,303,90.2,96.2,"4,173","4,307"
 Pathology,163,601,25,237,866,220,568,36.6,94.5,"2,428","6,119"
 Pediatrics (Categorical),211,"2,768",23,"1,934","3,647","1,746","2,711",63.1,97.9,"22,486","31,930"
 Pediatrics-Anesthesiology,6,7,0,15,21,6,7,85.7,100.0,43,49
-Pediatrice-Emergency Med,4,8,0,27,42,4,8,50.0,100.0,54,83
+Pediatrics-Emergency Med,4,8,0,27,42,4,8,50.0,100.0,54,83
 Pediatrics-Medical Genetics,16,20,1,17,29,14,18,70.0,90.0,125,148
 Pediatrics-P M & R,3,3,0,8,13,3,3,100.0,100.0,14,20
 Pediatrics-Preliminary,20,19,4,113,154,10,14,52.6,73.7,299,371
@@ -52,4 +52,4 @@ Surgery-Preliminary (PGY-1 Only),325,"1,363",151,"1,174","2,228",567,888,41.6,65
 Thoracic Surgery,28,36,0,72,107,31,36,86.1,100.0,543,643
 Transitional (PGY-1 Only),131,"1,086",19,"2,424","3,559",772,"1,016",71.1,93.6,"19,215","23,429"
 Vascular Surgery,52,60,2,61,91,50,58,83.3,96.7,949,"1,070"
-Total PGY-1,"4,523","30,232",466,"27,700","56,093","17,740","29,040",58.7,96.1,"278,237","409,468"
+Total PGY- 1,"4,523","30,232",466,"27,700","56,093","17,740","29,040",58.7,96.1,"278,237","409,468"

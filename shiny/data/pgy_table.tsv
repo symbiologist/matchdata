@@ -1,0 +1,561 @@
+Specialty	Year	PGY1	PGY2	Total	Predominance	Margin	% Predominance	Exclusivity	Category
+Anesthesiology	2012	919	557	1476	PGY1	362	62.3	Mixed	PGY1 Mixed
+Child Neurology	2012	99	47	146	PGY1	52	67.8	Mixed	PGY1 Mixed
+Dermatology	2012	23	340	363	PGY2	317	93.7	Predominant	PGY2 Predominant
+Emergency Medicine	2012	1668	0	1668	PGY1	1668	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2012	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Medicine	2012	2740	0	2740	PGY1	2740	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2012	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2012	5277	0	5277	PGY1	5277	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2012	9	0	9	PGY1	9	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2012	26	0	26	PGY1	26	100	Exclusive	PGY1 Exclusive
+Medicine-Family Medicine	2012	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2012	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Medicine-Neurology	2012	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2012	362	0	362	PGY1	362	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2012	1861	0	1861	PGY1	1861	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2012	5	0	5	PGY1	5	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2012	311	0	311	PGY1	311	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2012	20	0	20	PGY1	20	100	Exclusive	PGY1 Exclusive
+Neurodevelopmental Disabilities	2012	3	7	10	PGY2	4	70	Mixed	PGY2 Mixed
+Neurological Surgery	2012	196	0	196	PGY1	196	100	Exclusive	PGY1 Exclusive
+Neurology	2012	292	346	638	PGY2	54	54.2	Mixed	PGY2 Mixed
+Obstetrics-Gynecology	2012	1240	0	1240	PGY1	1240	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2012	682	0	682	PGY1	682	100	Exclusive	PGY1 Exclusive
+Otolaryngology	2012	285	0	285	PGY1	285	100	Exclusive	PGY1 Exclusive
+Pathology	2012	521	0	521	PGY1	521	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2012	2475	0	2475	PGY1	2475	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2012	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2012	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2012	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2012	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2012	55	0	55	PGY1	55	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2012	67	0	67	PGY1	67	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2012	18	0	18	PGY1	18	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2012	86	281	367	PGY2	195	76.6	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2012	101	0	101	PGY1	101	100	Exclusive	PGY1 Exclusive
+Preventive Medicine	2012	4	1	5	PGY1	3	80	Predominant	PGY1 Predominant
+Psychiatry (Categorical)	2012	1118	0	1118	PGY1	1118	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2012	10	0	10	PGY1	10	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2012	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2012	15	156	171	PGY2	141	91.2	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2012	135	976	1111	PGY2	841	87.8	Predominant	PGY2 Predominant
+Surgery (Categorical)	2012	1146	0	1146	PGY1	1146	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2012	1221	0	1221	PGY1	1221	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2012	20	0	20	PGY1	20	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2012	941	0	941	PGY1	941	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2012	41	0	41	PGY1	41	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2012	0	4	4	PGY2	4	100	Exclusive	PGY2 Exclusive
+Plastic Surgery	2012	0	20	20	PGY2	20	100	Exclusive	PGY2 Exclusive
+Psychiatry	2012	0	3	3	PGY2	3	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2013	1073	580	1653	PGY1	493	64.9	Mixed	PGY1 Mixed
+Child Neurology	2013	123	37	160	PGY1	86	76.9	Mixed	PGY1 Mixed
+Dermatology	2013	38	369	407	PGY2	331	90.7	Predominant	PGY2 Predominant
+Emergency Medicine	2013	1744	0	1744	PGY1	1744	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2013	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Medicine	2013	3037	0	3037	PGY1	3037	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2013	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2013	6277	0	6277	PGY1	6277	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2013	0	0	0	PGY2	0	NA	NA	PGY2 NA
+Medicine-Dermatology	2013	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2013	27	0	27	PGY1	27	100	Exclusive	PGY1 Exclusive
+Medicine-Family Medicine	2013	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2013	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Medicine-Neurology	2013	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2013	366	0	366	PGY1	366	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2013	1883	0	1883	PGY1	1883	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2013	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2013	335	0	335	PGY1	335	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2013	17	0	17	PGY1	17	100	Exclusive	PGY1 Exclusive
+Medical Genetics	2013	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Neurodevelopmental Disabilities	2013	3	7	10	PGY2	4	70	Mixed	PGY2 Mixed
+Neurological Surgery	2013	204	0	204	PGY1	204	100	Exclusive	PGY1 Exclusive
+Neurology	2013	361	331	692	PGY1	30	52.2	Mixed	PGY1 Mixed
+Nuclear Medicine	2013	1	5	6	PGY2	4	83.3	Predominant	PGY2 Predominant
+Obstetrics-Gynecology	2013	1259	0	1259	PGY1	1259	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2013	693	0	693	PGY1	693	100	Exclusive	PGY1 Exclusive
+Otolaryngology	2013	292	0	292	PGY1	292	100	Exclusive	PGY1 Exclusive
+Pathology	2013	583	0	583	PGY1	583	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2013	2616	0	2616	PGY1	2616	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2013	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2013	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2013	9	0	9	PGY1	9	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2013	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2013	44	0	44	PGY1	44	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2013	83	0	83	PGY1	83	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2013	19	0	19	PGY1	19	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2013	103	294	397	PGY2	191	74.1	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2013	116	0	116	PGY1	116	100	Exclusive	PGY1 Exclusive
+Preventive Medicine	2013	2	3	5	PGY2	1	60	Mixed	PGY2 Mixed
+Psychiatry (Categorical)	2013	1360	0	1360	PGY1	1360	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2013	11	0	11	PGY1	11	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2013	2	1	3	PGY1	1	66.7	Mixed	PGY1 Mixed
+Radiation Oncology	2013	23	160	183	PGY2	137	87.4	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2013	164	979	1143	PGY2	815	85.7	Predominant	PGY2 Predominant
+Surgery (Categorical)	2013	1185	0	1185	PGY1	1185	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2013	1278	0	1278	PGY1	1278	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2013	26	0	26	PGY1	26	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2013	937	0	937	PGY1	937	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2013	46	0	46	PGY1	46	100	Exclusive	PGY1 Exclusive
+Plastic Surgery	2013	0	11	11	PGY2	11	100	Exclusive	PGY2 Exclusive
+Psychiatry	2013	0	2	2	PGY2	2	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2014	1049	515	1564	PGY1	534	67.1	Mixed	PGY1 Mixed
+Child Neurology	2014	92	28	120	PGY1	64	76.7	Mixed	PGY1 Mixed
+Dermatology	2014	20	380	400	PGY2	360	95	Predominant	PGY2 Predominant
+Emergency Medicine	2014	1786	0	1786	PGY1	1786	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2014	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Medicine	2014	3109	0	3109	PGY1	3109	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2014	5	0	5	PGY1	5	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2014	6524	0	6524	PGY1	6524	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2014	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2014	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2014	28	0	28	PGY1	28	100	Exclusive	PGY1 Exclusive
+Medicine-Family Medicine	2014	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2014	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Medicine-Neurology	2014	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2014	374	0	374	PGY1	374	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2014	1905	0	1905	PGY1	1905	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2014	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2014	335	0	335	PGY1	335	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2014	18	0	18	PGY1	18	100	Exclusive	PGY1 Exclusive
+Neurodevelopmental Disabilities	2014	0	5	5	PGY2	5	100	Exclusive	PGY2 Exclusive
+Neurological Surgery	2014	206	0	206	PGY1	206	100	Exclusive	PGY1 Exclusive
+Neurology	2014	380	320	700	PGY1	60	54.3	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2014	1242	0	1242	PGY1	1242	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2014	22	0	22	PGY1	22	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2014	695	0	695	PGY1	695	100	Exclusive	PGY1 Exclusive
+Otolaryngology	2014	295	0	295	PGY1	295	100	Exclusive	PGY1 Exclusive
+Pathology	2014	597	0	597	PGY1	597	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2014	2640	0	2640	PGY1	2640	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2014	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2014	9	0	9	PGY1	9	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2014	10	0	10	PGY1	10	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2014	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2014	40	0	40	PGY1	40	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2014	75	0	75	PGY1	75	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2014	19	0	19	PGY1	19	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2014	96	287	383	PGY2	191	74.9	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2014	130	0	130	PGY1	130	100	Exclusive	PGY1 Exclusive
+Psychiatry (Categorical)	2014	1322	0	1322	PGY1	1322	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2014	10	0	10	PGY1	10	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2014	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2014	18	161	179	PGY2	143	89.9	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2014	137	1008	1145	PGY2	871	88	Predominant	PGY2 Predominant
+Surgery (Categorical)	2014	1205	0	1205	PGY1	1205	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2014	1286	0	1286	PGY1	1286	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2014	33	0	33	PGY1	33	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2014	868	0	868	PGY1	868	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2014	51	0	51	PGY1	51	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2014	0	4	4	PGY2	4	100	Exclusive	PGY2 Exclusive
+Plastic Surgery	2014	0	6	6	PGY2	6	100	Exclusive	PGY2 Exclusive
+Preventive Medicine	2014	0	2	2	PGY2	2	100	Exclusive	PGY2 Exclusive
+Psychiatry	2014	0	2	2	PGY2	2	100	Exclusive	PGY2 Exclusive
+Radiology-Nuclear Med	2014	0	1	1	PGY2	1	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2015	1094	506	1600	PGY1	588	68.4	Mixed	PGY1 Mixed
+Child Neurology	2015	104	24	128	PGY1	80	81.2	Predominant	PGY1 Predominant
+Dermatology	2015	22	385	407	PGY2	363	94.6	Predominant	PGY2 Predominant
+Emergency Medicine	2015	1821	0	1821	PGY1	1821	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2015	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Medicine	2015	3195	0	3195	PGY1	3195	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2015	5	0	5	PGY1	5	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2015	6770	0	6770	PGY1	6770	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2015	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2015	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2015	28	0	28	PGY1	28	100	Exclusive	PGY1 Exclusive
+Medicine-Family Medicine	2015	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2015	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Medicine-Neurology	2015	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2015	380	0	380	PGY1	380	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2015	1928	0	1928	PGY1	1928	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2015	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2015	341	0	341	PGY1	341	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2015	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Neurodevelopmental Disabilities	2015	1	5	6	PGY2	4	83.3	Predominant	PGY2 Predominant
+Neurological Surgery	2015	210	0	210	PGY1	210	100	Exclusive	PGY1 Exclusive
+Neurology	2015	404	313	717	PGY1	91	56.3	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2015	1255	0	1255	PGY1	1255	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2015	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2015	703	0	703	PGY1	703	100	Exclusive	PGY1 Exclusive
+Otolaryngology	2015	299	0	299	PGY1	299	100	Exclusive	PGY1 Exclusive
+Pathology	2015	605	0	605	PGY1	605	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2015	2668	0	2668	PGY1	2668	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2015	9	0	9	PGY1	9	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2015	9	0	9	PGY1	9	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2015	15	0	15	PGY1	15	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2015	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2015	36	0	36	PGY1	36	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2015	74	0	74	PGY1	74	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2015	19	0	19	PGY1	19	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2015	107	282	389	PGY2	175	72.5	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2015	148	0	148	PGY1	148	100	Exclusive	PGY1 Exclusive
+Psychiatry (Categorical)	2015	1353	0	1353	PGY1	1353	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2015	10	0	10	PGY1	10	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2015	3	1	4	PGY1	2	75	Mixed	PGY1 Mixed
+Radiation Oncology	2015	17	176	193	PGY2	159	91.2	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2015	133	999	1132	PGY2	866	88.3	Predominant	PGY2 Predominant
+Surgery (Categorical)	2015	1224	0	1224	PGY1	1224	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2015	1296	0	1296	PGY1	1296	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2015	35	0	35	PGY1	35	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2015	842	0	842	PGY1	842	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2015	57	0	57	PGY1	57	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2015	0	3	3	PGY2	3	100	Exclusive	PGY2 Exclusive
+Preventive Medicine	2015	0	2	2	PGY2	2	100	Exclusive	PGY2 Exclusive
+Psychiatry	2015	0	1	1	PGY2	1	100	Exclusive	PGY2 Exclusive
+Radiology-Nuclear Med	2015	0	1	1	PGY2	1	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2016	1127	481	1608	PGY1	646	70.1	Mixed	PGY1 Mixed
+Child Neurology	2016	116	18	134	PGY1	98	86.6	Predominant	PGY1 Predominant
+Dermatology	2016	21	399	420	PGY2	378	95	Predominant	PGY2 Predominant
+Emergency Medicine	2016	1895	0	1895	PGY1	1895	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2016	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Medicine	2016	3238	0	3238	PGY1	3238	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2016	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2016	7024	0	7024	PGY1	7024	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2016	5	0	5	PGY1	5	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2016	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2016	29	0	29	PGY1	29	100	Exclusive	PGY1 Exclusive
+Medicine-Family Medicine	2016	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2016	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2016	386	0	386	PGY1	386	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2016	1918	0	1918	PGY1	1918	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2016	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2016	328	0	328	PGY1	328	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2016	23	0	23	PGY1	23	100	Exclusive	PGY1 Exclusive
+Interventional Radiology (Integrated)	2016	3	11	14	PGY2	8	78.6	Mixed	PGY2 Mixed
+Neurodevelopmental Disabilities	2016	2	5	7	PGY2	3	71.4	Mixed	PGY2 Mixed
+Neurological Surgery	2016	216	0	216	PGY1	216	100	Exclusive	PGY1 Exclusive
+Neurology	2016	443	304	747	PGY1	139	59.3	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2016	1265	0	1265	PGY1	1265	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2016	22	0	22	PGY1	22	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2016	717	0	717	PGY1	717	100	Exclusive	PGY1 Exclusive
+Otolaryngology	2016	304	0	304	PGY1	304	100	Exclusive	PGY1 Exclusive
+Pathology	2016	579	0	579	PGY1	579	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2016	2689	0	2689	PGY1	2689	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2016	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2016	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2016	14	0	14	PGY1	14	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2016	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2016	43	0	43	PGY1	43	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2016	79	0	79	PGY1	79	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2016	20	0	20	PGY1	20	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2016	112	290	402	PGY2	178	72.1	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2016	152	0	152	PGY1	152	100	Exclusive	PGY1 Exclusive
+Preventive Medicine	2016	1	2	3	PGY2	1	66.7	Mixed	PGY2 Mixed
+Psychiatry (Categorical)	2016	1384	0	1384	PGY1	1384	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2016	10	0	10	PGY1	10	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2016	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2016	15	168	183	PGY2	153	91.8	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2016	151	982	1133	PGY2	831	86.7	Predominant	PGY2 Predominant
+Surgery (Categorical)	2016	1241	0	1241	PGY1	1241	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2016	1308	0	1308	PGY1	1308	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2016	38	0	38	PGY1	38	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2016	838	0	838	PGY1	838	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2016	56	0	56	PGY1	56	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2016	0	3	3	PGY2	3	100	Exclusive	PGY2 Exclusive
+Psychiatry	2016	0	1	1	PGY2	1	100	Exclusive	PGY2 Exclusive
+Radiology-Nuclear Med	2016	0	3	3	PGY2	3	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2017	1202	441	1643	PGY1	761	73.2	Mixed	PGY1 Mixed
+Child Neurology	2017	128	11	139	PGY1	117	92.1	Predominant	PGY1 Predominant
+Dermatology	2017	26	423	449	PGY2	397	94.2	Predominant	PGY2 Predominant
+Emergency Medicine	2017	2047	0	2047	PGY1	2047	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2017	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Medicine	2017	3356	0	3356	PGY1	3356	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2017	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2017	7233	0	7233	PGY1	7233	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2017	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2017	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2017	26	0	26	PGY1	26	100	Exclusive	PGY1 Exclusive
+Medicine-Family Medicine	2017	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2017	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2017	381	0	381	PGY1	381	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2017	1915	0	1915	PGY1	1915	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2017	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2017	341	0	341	PGY1	341	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2017	24	0	24	PGY1	24	100	Exclusive	PGY1 Exclusive
+Interventional Radiology (Integrated)	2017	29	95	124	PGY2	66	76.6	Mixed	PGY2 Mixed
+Neurodevelopmental Disabilities	2017	3	4	7	PGY2	1	57.1	Mixed	PGY2 Mixed
+Neurological Surgery	2017	218	0	218	PGY1	218	100	Exclusive	PGY1 Exclusive
+Neurology	2017	492	294	786	PGY1	198	62.6	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2017	1288	0	1288	PGY1	1288	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2017	23	0	23	PGY1	23	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2017	727	0	727	PGY1	727	100	Exclusive	PGY1 Exclusive
+Otolaryngology	2017	305	0	305	PGY1	305	100	Exclusive	PGY1 Exclusive
+Pathology	2017	601	0	601	PGY1	601	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2017	2738	0	2738	PGY1	2738	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2017	9	0	9	PGY1	9	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2017	10	0	10	PGY1	10	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2017	15	0	15	PGY1	15	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2017	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2017	34	0	34	PGY1	34	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2017	83	0	83	PGY1	83	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2017	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2017	119	294	413	PGY2	175	71.2	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2017	159	0	159	PGY1	159	100	Exclusive	PGY1 Exclusive
+Preventive Medicine	2017	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Psychiatry (Categorical)	2017	1495	0	1495	PGY1	1495	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2017	10	0	10	PGY1	10	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2017	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2017	16	177	193	PGY2	161	91.7	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2017	121	932	1053	PGY2	811	88.5	Predominant	PGY2 Predominant
+Surgery (Categorical)	2017	1281	0	1281	PGY1	1281	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2017	1325	0	1325	PGY1	1325	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2017	37	0	37	PGY1	37	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2017	908	0	908	PGY1	908	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2017	60	0	60	PGY1	60	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2017	0	4	4	PGY2	4	100	Exclusive	PGY2 Exclusive
+Radiology-Nuclear Med	2017	0	2	2	PGY2	2	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2018	1253	447	1700	PGY1	806	73.7	Mixed	PGY1 Mixed
+Child Neurology	2018	134	8	142	PGY1	126	94.4	Predominant	PGY1 Predominant
+Dermatology	2018	25	426	451	PGY2	401	94.5	Predominant	PGY2 Predominant
+Emergency Medicine	2018	2278	0	2278	PGY1	2278	100	Exclusive	PGY1 Exclusive
+Emergency Med-Anesthesiology	2018	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2018	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Medicine	2018	3629	0	3629	PGY1	3629	100	Exclusive	PGY1 Exclusive
+Family Medicine-ONMM	2018	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2018	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2018	7542	0	7542	PGY1	7542	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2018	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2018	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2018	26	0	26	PGY1	26	100	Exclusive	PGY1 Exclusive
+Medicine-Family Medicine	2018	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2018	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2018	382	0	382	PGY1	382	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2018	1883	0	1883	PGY1	1883	100	Exclusive	PGY1 Exclusive
+Medicine-Preventivel Med	2018	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2018	374	0	374	PGY1	374	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2018	24	0	24	PGY1	24	100	Exclusive	PGY1 Exclusive
+Interventional Radiology (Integrated)	2018	35	98	133	PGY2	63	73.7	Mixed	PGY2 Mixed
+Neurodevelopmental Disabilities	2018	4	4	8	PGY2	0	50	Mixed	PGY2 Mixed
+Neurological Surgery	2018	225	0	225	PGY1	225	100	Exclusive	PGY1 Exclusive
+Neurology	2018	552	287	839	PGY1	265	65.8	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2018	1336	0	1336	PGY1	1336	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2018	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2018	742	0	742	PGY1	742	100	Exclusive	PGY1 Exclusive
+Osteo Neuromusculoskeletal Med	2018	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Otolaryngology	2018	315	0	315	PGY1	315	100	Exclusive	PGY1 Exclusive
+Pathology	2018	601	0	601	PGY1	601	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2018	2768	0	2768	PGY1	2768	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2018	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2018	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2018	20	0	20	PGY1	20	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2018	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2018	19	0	19	PGY1	19	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2018	90	0	90	PGY1	90	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2018	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2018	133	281	414	PGY2	148	67.9	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2018	168	0	168	PGY1	168	100	Exclusive	PGY1 Exclusive
+Preventive Medicine	2018	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Psychiatry (Categorical)	2018	1556	0	1556	PGY1	1556	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2018	12	0	12	PGY1	12	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2018	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2018	16	177	193	PGY2	161	91.7	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2018	125	944	1069	PGY2	819	88.3	Predominant	PGY2 Predominant
+Surgery (Categorical)	2018	1319	0	1319	PGY1	1319	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2018	1363	0	1363	PGY1	1363	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2018	36	0	36	PGY1	36	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2018	1086	0	1086	PGY1	1086	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2018	60	0	60	PGY1	60	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2018	0	3	3	PGY2	3	100	Exclusive	PGY2 Exclusive
+Radiology-Nuclear Med	2018	0	3	3	PGY2	3	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2019	1337	428	1765	PGY1	909	75.8	Mixed	PGY1 Mixed
+Child Neurology	2019	145	11	156	PGY1	134	92.9	Predominant	PGY1 Predominant
+Dermatology	2019	30	447	477	PGY2	417	93.7	Predominant	PGY2 Predominant
+Emergency Medicine	2019	2488	0	2488	PGY1	2488	100	Exclusive	PGY1 Exclusive
+Emergency Med-Anesthesiology	2019	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2019	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Family Medicine	2019	4107	0	4107	PGY1	4107	100	Exclusive	PGY1 Exclusive
+Family Medicine-ONMM	2019	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2019	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2019	8116	0	8116	PGY1	8116	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2019	5	0	5	PGY1	5	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2019	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2019	26	0	26	PGY1	26	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2019	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2019	390	0	390	PGY1	390	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2019	1944	0	1944	PGY1	1944	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2019	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2019	396	0	396	PGY1	396	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2019	23	0	23	PGY1	23	100	Exclusive	PGY1 Exclusive
+Interventional Radiology (Integrated)	2019	37	113	150	PGY2	76	75.3	Mixed	PGY2 Mixed
+Neurodevelopmental Disabilities	2019	4	5	9	PGY2	1	55.6	Mixed	PGY2 Mixed
+Neurological Surgery	2019	232	0	232	PGY1	232	100	Exclusive	PGY1 Exclusive
+Neurology	2019	617	281	898	PGY1	336	68.7	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2019	1395	0	1395	PGY1	1395	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2019	18	0	18	PGY1	18	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2019	755	0	755	PGY1	755	100	Exclusive	PGY1 Exclusive
+Osteo Neuromusculoskeletal Med	2019	2	4	6	PGY2	2	66.7	Mixed	PGY2 Mixed
+Otolaryngology	2019	328	0	328	PGY1	328	100	Exclusive	PGY1 Exclusive
+Pathology	2019	601	0	601	PGY1	601	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2019	2847	0	2847	PGY1	2847	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2019	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2019	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2019	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2019	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2019	24	0	24	PGY1	24	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2019	90	0	90	PGY1	90	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2019	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2019	138	308	446	PGY2	170	69.1	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2019	172	0	172	PGY1	172	100	Exclusive	PGY1 Exclusive
+Preventive Medicine	2019	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Psychiatry (Categorical)	2019	1740	0	1740	PGY1	1740	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2019	12	0	12	PGY1	12	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2019	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2019	15	192	207	PGY2	177	92.8	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2019	123	965	1088	PGY2	842	88.7	Predominant	PGY2 Predominant
+Surgery (Categorical)	2019	1432	0	1432	PGY1	1432	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2019	1158	0	1158	PGY1	1158	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2019	37	0	37	PGY1	37	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2019	1252	0	1252	PGY1	1252	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2019	66	0	66	PGY1	66	100	Exclusive	PGY1 Exclusive
+Radiology-Nuclear Med	2019	0	2	2	PGY2	2	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2020	1370	398	1768	PGY1	972	77.5	Mixed	PGY1 Mixed
+Child Neurology	2020	159	9	168	PGY1	150	94.6	Predominant	PGY1 Predominant
+Dermatology	2020	31	478	509	PGY2	447	93.9	Predominant	PGY2 Predominant
+Emergency Medicine	2020	2665	0	2665	PGY1	2665	100	Exclusive	PGY1 Exclusive
+Emergency Med-Anesthesiology	2020	0	0	0	PGY2	0	NA	NA	PGY2 NA
+Emergency Med-Family Med	2020	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Family Medicine	2020	4662	0	4662	PGY1	4662	100	Exclusive	PGY1 Exclusive
+Family Medicine-ONMM	2020	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2020	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2020	8697	0	8697	PGY1	8697	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2020	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2020	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2020	30	0	30	PGY1	30	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2020	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2020	390	0	390	PGY1	390	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2020	1911	0	1911	PGY1	1911	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2020	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2020	430	0	430	PGY1	430	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2020	23	0	23	PGY1	23	100	Exclusive	PGY1 Exclusive
+Interventional Radiology (Integrated)	2020	38	118	156	PGY2	80	75.6	Mixed	PGY2 Mixed
+Neurodevelopmental Disabilities	2020	4	3	7	PGY1	1	57.1	Mixed	PGY1 Mixed
+Neurological Surgery	2020	232	0	232	PGY1	232	100	Exclusive	PGY1 Exclusive
+Neurology	2020	682	244	926	PGY1	438	73.7	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2020	1443	0	1443	PGY1	1443	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2020	18	0	18	PGY1	18	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2020	849	0	849	PGY1	849	100	Exclusive	PGY1 Exclusive
+Osteo Neuromusculoskeletal Med	2020	10	7	17	PGY1	3	58.8	Mixed	PGY1 Mixed
+Otolaryngology	2020	350	0	350	PGY1	350	100	Exclusive	PGY1 Exclusive
+Pathology	2020	603	0	603	PGY1	603	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2020	2864	0	2864	PGY1	2864	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2020	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2020	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2020	22	0	22	PGY1	22	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2020	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2020	19	0	19	PGY1	19	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2020	92	0	92	PGY1	92	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2020	22	0	22	PGY1	22	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2020	151	316	467	PGY2	165	67.7	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2020	180	0	180	PGY1	180	100	Exclusive	PGY1 Exclusive
+Preventive Medicine	2020	1	0	1	PGY1	1	100	Exclusive	PGY1 Exclusive
+Psychiatry (Categorical)	2020	1858	0	1858	PGY1	1858	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2020	12	0	12	PGY1	12	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2020	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2020	14	175	189	PGY2	161	92.6	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2020	123	990	1113	PGY2	867	88.9	Predominant	PGY2 Predominant
+Surgery (Categorical)	2020	1536	0	1536	PGY1	1536	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2020	1174	0	1174	PGY1	1174	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2020	38	0	38	PGY1	38	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2020	1436	0	1436	PGY1	1436	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2020	75	0	75	PGY1	75	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2020	0	1	1	PGY2	1	100	Exclusive	PGY2 Exclusive
+Radiology-Nuclear Med	2020	0	3	3	PGY2	3	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2021	1460	339	1799	PGY1	1121	81.2	Predominant	PGY1 Predominant
+Child Neurology	2021	159	8	167	PGY1	151	95.2	Predominant	PGY1 Predominant
+Dermatology	2021	30	477	507	PGY2	447	94.1	Predominant	PGY2 Predominant
+Emergency Medicine	2021	2840	0	2840	PGY1	2840	100	Exclusive	PGY1 Exclusive
+Emergency Med-Anesthesiology	2021	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2021	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Family Medicine	2021	4823	0	4823	PGY1	4823	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2021	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2021	9024	0	9024	PGY1	9024	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2021	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2021	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2021	31	0	31	PGY1	31	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2021	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2021	385	0	385	PGY1	385	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2021	1833	0	1833	PGY1	1833	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2021	5	0	5	PGY1	5	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2021	441	0	441	PGY1	441	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2021	24	0	24	PGY1	24	100	Exclusive	PGY1 Exclusive
+Interventional Radiology (Integrated)	2021	41	121	162	PGY2	80	74.7	Mixed	PGY2 Mixed
+Neurodevelopmental Disabilities	2021	6	4	10	PGY1	2	60	Mixed	PGY1 Mixed
+Neurological Surgery	2021	234	0	234	PGY1	234	100	Exclusive	PGY1 Exclusive
+Neurology	2021	715	254	969	PGY1	461	73.8	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2021	1460	0	1460	PGY1	1460	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2021	18	0	18	PGY1	18	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2021	868	0	868	PGY1	868	100	Exclusive	PGY1 Exclusive
+Osteo Neuromusculoskeletal Med	2021	12	7	19	PGY1	5	63.2	Mixed	PGY1 Mixed
+Otolaryngology	2021	350	0	350	PGY1	350	100	Exclusive	PGY1 Exclusive
+Pathology	2021	611	0	611	PGY1	611	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2021	2901	0	2901	PGY1	2901	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2021	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2021	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2021	27	0	27	PGY1	27	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2021	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2021	24	0	24	PGY1	24	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2021	75	0	75	PGY1	75	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2021	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2021	157	327	484	PGY2	170	67.6	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2021	187	0	187	PGY1	187	100	Exclusive	PGY1 Exclusive
+Psychiatry (Categorical)	2021	1907	0	1907	PGY1	1907	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2021	12	0	12	PGY1	12	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2021	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2021	15	173	188	PGY2	158	92	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2021	122	986	1108	PGY2	864	89	Predominant	PGY2 Predominant
+Surgery (Categorical)	2021	1569	0	1569	PGY1	1569	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2021	1136	0	1136	PGY1	1136	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2021	46	0	46	PGY1	46	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2021	1497	0	1497	PGY1	1497	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2021	79	0	79	PGY1	79	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2021	0	1	1	PGY2	1	100	Exclusive	PGY2 Exclusive
+Radiology-Nuclear Med	2021	0	2	2	PGY2	2	100	Exclusive	PGY2 Exclusive
+Anesthesiology	2022	1509	346	1855	PGY1	1163	81.3	Predominant	PGY1 Predominant
+Child Neurology	2022	166	7	173	PGY1	159	96	Predominant	PGY1 Predominant
+Dermatology	2022	30	492	522	PGY2	462	94.3	Predominant	PGY2 Predominant
+Emergency Medicine	2022	2921	0	2921	PGY1	2921	100	Exclusive	PGY1 Exclusive
+Emergency Med-Anesthesiology	2022	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Emergency Med-Family Med	2022	7	0	7	PGY1	7	100	Exclusive	PGY1 Exclusive
+Family Medicine	2022	4916	0	4916	PGY1	4916	100	Exclusive	PGY1 Exclusive
+Family Med-Preventive Med	2022	2	0	2	PGY1	2	100	Exclusive	PGY1 Exclusive
+Internal Medicine (Categorical)	2022	9380	0	9380	PGY1	9380	100	Exclusive	PGY1 Exclusive
+Medicine-Anesthesiology	2022	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Medicine-Dermatology	2022	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Medicine-Emergency Med	2022	31	0	31	PGY1	31	100	Exclusive	PGY1 Exclusive
+Medicine-Medical Genetics	2022	5	0	5	PGY1	5	100	Exclusive	PGY1 Exclusive
+Medicine-Pediatrics	2022	392	0	392	PGY1	392	100	Exclusive	PGY1 Exclusive
+Medicine-Preliminary (PGY-1 Only)	2022	1774	0	1774	PGY1	1774	100	Exclusive	PGY1 Exclusive
+Medicine-Preventive Med	2022	8	0	8	PGY1	8	100	Exclusive	PGY1 Exclusive
+Medicine-Primary	2022	429	0	429	PGY1	429	100	Exclusive	PGY1 Exclusive
+Medicine-Psychiatry	2022	24	0	24	PGY1	24	100	Exclusive	PGY1 Exclusive
+Interventional Radiology (Integrated)	2022	45	123	168	PGY2	78	73.2	Mixed	PGY2 Mixed
+Neurodevelopmental Disabilities	2022	5	3	8	PGY1	2	62.5	Mixed	PGY1 Mixed
+Neurological Surgery	2022	240	0	240	PGY1	240	100	Exclusive	PGY1 Exclusive
+Neurology	2022	772	233	1005	PGY1	539	76.8	Mixed	PGY1 Mixed
+Obstetrics-Gynecology	2022	1503	0	1503	PGY1	1503	100	Exclusive	PGY1 Exclusive
+OB/GYN-Preliminary (PGY-1 Only)	2022	18	0	18	PGY1	18	100	Exclusive	PGY1 Exclusive
+Orthopedic Surgery	2022	875	0	875	PGY1	875	100	Exclusive	PGY1 Exclusive
+Osteo Neuromusculoskeletal Med	2022	16	2	18	PGY1	14	88.9	Predominant	PGY1 Predominant
+Otolaryngology	2022	361	0	361	PGY1	361	100	Exclusive	PGY1 Exclusive
+Pathology	2022	631	0	631	PGY1	631	100	Exclusive	PGY1 Exclusive
+Pediatrics (Categorical)	2022	2942	0	2942	PGY1	2942	100	Exclusive	PGY1 Exclusive
+Pediatrics-Anesthesiology	2022	6	0	6	PGY1	6	100	Exclusive	PGY1 Exclusive
+Pediatrics-Emergency Med	2022	9	0	9	PGY1	9	100	Exclusive	PGY1 Exclusive
+Pediatrics-Medical Genetics	2022	30	0	30	PGY1	30	100	Exclusive	PGY1 Exclusive
+Pediatrics-P M & R	2022	3	0	3	PGY1	3	100	Exclusive	PGY1 Exclusive
+Pediatrics-Preliminary	2022	23	0	23	PGY1	23	100	Exclusive	PGY1 Exclusive
+Pediatrics-Primary	2022	74	0	74	PGY1	74	100	Exclusive	PGY1 Exclusive
+Peds/Psych/Child Psych	2022	21	0	21	PGY1	21	100	Exclusive	PGY1 Exclusive
+Physical Medicine & Rehab	2022	180	338	518	PGY2	158	65.3	Mixed	PGY2 Mixed
+Plastic Surgery (Integrated)	2022	194	0	194	PGY1	194	100	Exclusive	PGY1 Exclusive
+Psychiatry (Categorical)	2022	2047	0	2047	PGY1	2047	100	Exclusive	PGY1 Exclusive
+Psychiatry-Family Medicine	2022	10	0	10	PGY1	10	100	Exclusive	PGY1 Exclusive
+Psychiatry-Neurology	2022	4	0	4	PGY1	4	100	Exclusive	PGY1 Exclusive
+Radiation Oncology	2022	10	166	176	PGY2	156	94.3	Predominant	PGY2 Predominant
+Radiology-Diagnostic	2022	132	997	1129	PGY2	865	88.3	Predominant	PGY2 Predominant
+Surgery (Categorical)	2022	1622	0	1622	PGY1	1622	100	Exclusive	PGY1 Exclusive
+Surgery-Preliminary (PGY-1 Only)	2022	1150	0	1150	PGY1	1150	100	Exclusive	PGY1 Exclusive
+Thoracic Surgery	2022	47	0	47	PGY1	47	100	Exclusive	PGY1 Exclusive
+Transitional (PGY-1 Only)	2022	1616	0	1616	PGY1	1616	100	Exclusive	PGY1 Exclusive
+Vascular Surgery	2022	84	0	84	PGY1	84	100	Exclusive	PGY1 Exclusive
+Nuclear Medicine	2022	0	1	1	PGY2	1	100	Exclusive	PGY2 Exclusive
+Radiology-Nuclear Med	2022	0	3	3	PGY2	3	100	Exclusive	PGY2 Exclusive

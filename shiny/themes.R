@@ -23,7 +23,7 @@ theme_custom <- function(base_size = 16,
   }
   
   theme_foundation(base_size = base_size, base_family = base_family) + 
-    theme(plot.title = element_text(face = "plain", size = 14, hjust = 0.5),
+    theme(plot.title = element_text(face = "plain", size = 16, hjust = 0.5),
           text = element_text(),
           panel.background = element_rect(color = NA),
           plot.background = element_rect(color = NA),
@@ -31,7 +31,7 @@ theme_custom <- function(base_size = 16,
           axis.title = element_text(face = "plain", size = rel(1)),
           axis.title.y = element_text(angle=90, vjust = 0.5),
           axis.title.x = element_text(vjust = 0),
-          axis.text = element_text(color = 'black'),
+          axis.text = element_text(color = 'black', hjust = 1),
           axis.line = element_blank(),
           panel.grid.major = grid_element,
           panel.grid.minor = element_blank(),

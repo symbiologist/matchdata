@@ -1,0 +1,13 @@
+name: matchdata
+title: matchdata
+username:
+account: davidwu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6177518
+bundleId: 5839659
+url: https://davidwu.shinyapps.io/matchdata/
+when: 1651001247.2698
+lastSyncTime: 1651001247.26981
+asMultiple: FALSE
+asStatic: FALSE

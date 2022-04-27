@@ -27,7 +27,7 @@ colors_two <- brewer.pal(3, 'RdBu')[c(1,3)]
 ui <- navbarPage(
   theme = bs_theme(font_scale = 1, `enable-gradients` = TRUE,
                    `enable-shadows` = TRUE, `enable-rounded` = TRUE, bootswatch = 'litera'),
-  title = "NRMP Match Data",
+  title = "Match DataViz",
   fluid = FALSE,
   # tags$head(
   #   tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
@@ -275,8 +275,18 @@ ui <- navbarPage(
                     column(width = 12,
                            "The National Residenct Matching Program (NRMP) tracks these numbers each year, which they publicly share on their website.
                            I extracted and processed the last 10 years of data to create this interactive tool so medical students can easily visualize data about their intended specialties. 
-                           For example, 2022 witnessed a striking decrease in students applying in Emergency Medicine, as well as a record drop in students who successfully matched in Dermatology. 
-                           I hope that by making this information more accessible, medical students can arm themselves with greater knowledge about the residency match process."),
+                           
+                           I hope that by making this information more accessible, medical students can arm themselves with greater knowledge about the match process.",
+                           br(),
+                           '',
+                           br(),
+                           "For example, 2022 witnessed a record drop in students applying in Emergency Medicine, leading to a 94% match rate, compared to 84% the year before. 
+                           On the other hand, there was record surge in students applying to Dermatology, causing the largest drop in successful matches across all specialties in 2022, a trend that started in 2020." ,
+                           br(),
+                           '',
+                           br(),
+                           "For certain specialties that have both PGY1 and PGY2 programs (e.g. Anesthesia), there can also be massive differences in the match rate, despite both types of programs falling into the same specialty."
+                           ),
                     br(),
                     column(width = 12,
                            ''),
@@ -341,7 +351,7 @@ server <- function(input, output) {
     
     p <- match_abs_table %>% 
       filter(Specialty %in% input$specialty,
-             Class == 'PGY1') %>% 
+             Class == 'PGY2') %>% 
       ggplot(aes(x = Year,
                  y = Value,
                  color = Name,

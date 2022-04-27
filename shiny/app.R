@@ -16,10 +16,12 @@ specialties <- full_table$Specialty %>% unique()
 years <- unique(full_table$Year)
 timeframes <- combined_delta_table$Timeframe %>% unique()
 
+prelims <- specialties %>% str_subset('Only|Prelim')
+
 sidebar_width <- 2
 main_width <- 8
 
-colors_two <- c('dodgerblue4', 'darkorchid4')
+colors_two <- brewer.pal(3, 'RdBu')[c(1,3)]
 
 # Define UI for application that draws a histogram
 ui <- navbarPage(
@@ -32,46 +34,85 @@ ui <- navbarPage(
   #   ),
   
   tabPanel("By Specialty",
-           h2('Applicants Matched Over Time', align = 'center'),
            
            fixedRow(
-             h3('Absolute Number Over Time', align = 'center')
+             column(width = 12,
+                    h2('Applicants Matched Over Time', align = 'center')
+             )
            ),
+           
+           fixedRow(
+             column(width = 12,
+                    'Here you can view the number of positions, applicants, and the match rate over time for a specialty of interest.
+                    Select a specialty to start!'
+                    ),
+           ),
+
            fixedRow(
              column(
                width = 4,
                selectInput(inputId = 'specialty',
-                           label = 'Select a Specialty',
+                           label = h5('Select a Specialty'),
                            choices = specialties, 
                            multiple = FALSE, 
                            selected = 'Dermatology')
              )
            ),
            fixedRow(
-             column(width = 9,
-                    girafeOutput("plot_match_abs_pgy1", height = '400px', width = '900px'),
-                    girafeOutput('plot_match_abs_pgy2', height = '400px', width = '900px')
+             column(width = 12,
+                    h3('Absolute Number', align = 'center'))
+             
+           ),
+           fixedRow(''),
+           fixedRow(
+             column(width = 6,
+                    girafeOutput("plot_match_abs_pgy1", height = '350px', width = '600px')
              ),
-             column(width = 3,
-                    plotOutput('plot_match_abs_legend'))
+             column(width = 6,
+                    girafeOutput('plot_match_abs_pgy2', height = '350px', width = '600px')),
            ),
            fixedRow(
-             h3('Match Rate % Over Time', align = 'center')
+             column(width = 12,
+                    plotOutput('plot_match_abs_legend', height = '30px')
+             )
            ),
            fixedRow(
-             column(width = 9,
-                    girafeOutput('plot_match_ratetime_pgy1', height = '400px', width = '900px'),
-                    girafeOutput('plot_match_ratetime_pgy2', height = '400px', width = '900px')
-             ),
-             column(width = 3,
-                    plotOutput('plot_match_ratetime_legend'))
+             column(width = 12,
+                    h3('Match Rate %', align = 'center')),
+             
            ),
-
-
+           fixedRow(
+             column(width = 6,
+                    girafeOutput('plot_match_ratetime_pgy1', height = '350px', width = '600px')
+             ),
+             column(width = 6,
+                    girafeOutput('plot_match_ratetime_pgy2', height = '350px', width = '600px')
+             )
+           ),
+           fixedRow(
+             column(width = 12,
+                    plotOutput('plot_match_ratetime_legend', height = '30px')
+             )
+           ),
+           fixedRow(
+             br()
+           )
   ),
-  tabPanel("Match Rate",
+  tabPanel("By Year",
            
            h2('Match Rates Across Programs', align = 'center'),
+           
+           fixedRow(
+             column(width = 12,
+                    'Here you can view the match rate in a given year across all specialties. Select a year and use the filters to hide smaller programs if desired.'
+             ),
+           ),
+           
+           fixedRow(
+             column(width = 4,
+                    h5('Filter Programs')
+             )
+           ),
            
            fixedRow(
              column(width = 2,
@@ -81,29 +122,27 @@ ui <- navbarPage(
                                 selected = '2022',
                                 multiple = FALSE),
              ),
-             column(width = 4,
+             column(width = 3,
                     sliderInput(inputId = 'matchrate_positions',
                                 label = 'Minimum Positions Offered',
                                 min = 0,
                                 max = 1000, 
                                 value = 10)
              ),
-             column(width = 4,
+             column(width = 3,
                     sliderInput(inputId = 'matchrate_programs',
                                 label = 'Minimum No. of Programs',
                                 min = 0,
                                 max = 100, 
                                 value = 10)
+             ),
+             column(width = 3,
+                    checkboxInput(inputId = 'matchrate_checkbox',
+                                       label = 'Exclude Prelim Programs',
+                                       value = TRUE)
              )
            ),
-             # column(width = 4,
-             #        checkboxGroupInput(inputId = 'matchrate_checkbox',
-             #                           label = 'Options',
-             #                           choices = c('Exclude Preliminary Programs',
-             #                                       'Exclude '))
-             #)
            fixedRow(
-             
              column(width = 6,
                     h3('PGY1 Programs'),
                     girafeOutput('plot_match_rate_pgy1', 
@@ -135,23 +174,37 @@ ui <- navbarPage(
   tabPanel("Greatest Change",
            h2('Changes in Match Rate', align = 'center'),
            fixedRow(
+             column(width = 12,
+                    'Which specialties saw the largest changes in match rate? Select a timeframe and use the filters to see which specialties had the largest changes.'
+             ),
+           ),
+           fixedRow(
+             column(width = 4,
+                    h5('Filter Programs'))
+           ),
+           fixedRow(
              column(width = 2,
                     selectInput(inputId = 'timeframe',
                                 label = 'Timeframe',
                                 choices = timeframes,
                                 selected = '1 Year')),
-             column(width = 4,
+             column(width = 3,
                     sliderInput(inputId = 'positions',
                                 label = 'Minimum Positions',
                                 min = 0,
                                 max = 1000, 
                                 value = 10)),
-             column(width = 4,
+             column(width = 3,
                     sliderInput(inputId = 'programs',
                                 label = 'Minimum No. of Programs',
                                 min = 0,
                                 max = 100, 
-                                value = 10))
+                                value = 10)),
+             column(width = 3,
+                    checkboxInput(inputId = 'delta_checkbox',
+                                  label = 'Exclude Prelim Programs',
+                                  value = TRUE)
+             )
            ),
            fixedRow(
              column(width = 6,
@@ -164,13 +217,13 @@ ui <- navbarPage(
   tabPanel("Top Charts",
            fixedRow(
              column(width = 3,
-                    h4('Most Competitive Specialties')),
+                    h5('Most Competitive Specialties')),
              column(width = 3, 
-                    h4('Least Competitive Specialties')),
+                    h5('Least Competitive Specialties')),
              column(width = 3,
-                    h4('Fastest Growing Specialties')),
+                    h5('Fastest Growing Specialties')),
              column(width = 3,
-                    h4('Slowest Growing Specialties'))
+                    h5('Slowest Growing Specialties'))
            ),
            fixedRow(
              column(width = 3,
@@ -184,23 +237,25 @@ ui <- navbarPage(
                     h4('What happens to medical school graduates applying to residencies every year?'))
            ),
            fixedRow(column(width = 12,
-                           "I'm a 4th year medical student at UCSF who's interested in genomics and informatics. 
-                           I love analyzing data and wanted an interactive way to explore the numbers behind the medical specialties and how they change over time."),
+                           "I'm a 4th year medical student at UCSF interested in applying genomics and informatics to medicine. 
+                           I love analyzing data and wanted an interactive way to explore the numbers behind medical graduates and their intended specialties."),
                     br(),
                     column(width = 12,
                            ''),
                     br(),
                     column(width = 12,
-                           "Fortunately, the NRMP (National Residenct Matching Program) carefully collects these numbers each year and publicly shares them on their website.
-                           I downloaded and processed the last 10 years of data to create this interactive website to make it easier for medical students to visualize changes in their desired specialties. 
-                           For example, 2022 saw a striking decrease in students applying in Emergency Medicine, as well as a record drop in students who successfully matched in dermatology."),
+                           "The National Residenct Matching Program (NRMP) tracks these numbers each year, which they publicly share on their website.
+                           I extracted and processed the last 10 years of data to create this interactive tool so medical students can easily visualize data about their intended specialties. 
+                           For example, 2022 witnessed a striking decrease in students applying in Emergency Medicine, as well as a record drop in students who successfully matched in dermatology. 
+                           Hopefully by making these data more accessible, I can help medical students can arm themselves with greater knowledge about the residency match process."),
                     br(),
                     column(width = 12,
                            ''),
                     br(),
                     column(width = 12,
                            
-                           "Since I work on this in my free time and pay to host it online, this page remains in active (but slow) development! Feel free to contact me (dwu@ucsf.edu) if you have any suggestions.")
+                           "All of the original data came from public documents published by the NRMP (www.nrmp.org). These visualizations are not officially endorsed by their organization.
+                           I work on this in my free time and pay to host it online, so this page remains in active (but slow) development! Feel free to contact me (dwu@ucsf.edu) if you have any suggestions.")
                            
            )
            
@@ -246,7 +301,7 @@ ui <- navbarPage(
       #guides(color=guide_legend(nrow = 2, byrow = FALSE))
       
       girafe(ggobj = p,
-             width_svg = 8,
+             width_svg = 6,
              height_svg = 4,
              options = list(opts_selection(type = "none"),
                             opts_toolbar(saveaspng = FALSE)))
@@ -278,7 +333,7 @@ ui <- navbarPage(
       #guides(color=guide_legend(nrow = 2, byrow = FALSE))
       
       girafe(ggobj = p,
-             width_svg = 8,
+             width_svg = 6,
              height_svg = 4,
              options = list(opts_selection(type = "none"),
                             opts_toolbar(saveaspng = FALSE)))
@@ -301,9 +356,9 @@ ui <- navbarPage(
                    tooltip = Value)) +
         geom_point(size = 4, alpha = 1) +
         scale_color_manual(values = absolute_color_scale) +
-        theme_custom(legend_position = 'right') +
-        theme(legend.text = element_text(size = 16))
-      guides(color=guide_legend(nrow = 5, byrow = FALSE))
+        theme_custom(legend_position = 'bottom') +
+        theme(legend.text = element_text(size = 14))
+      guides(color=guide_legend(nrow = 1, byrow = TRUE))
       
       legend <- g_legend(p) 
       
@@ -336,7 +391,7 @@ ui <- navbarPage(
       #guides(color=guide_legend(nrow = 2, byrow = FALSE))
       
       girafe(ggobj = p,
-             width_svg = 8,
+             width_svg = 6,
              height_svg = 4,
              options = list(opts_selection(type = "none"),
                             opts_toolbar(saveaspng = FALSE)))
@@ -365,7 +420,7 @@ ui <- navbarPage(
       #guides(color=guide_legend(nrow = 2, byrow = FALSE))
       
       girafe(ggobj = p,
-             width_svg = 8,
+             width_svg = 6,
              height_svg = 4,
              options = list(opts_selection(type = "none"),
                             opts_toolbar(saveaspng = FALSE)))
@@ -384,9 +439,9 @@ ui <- navbarPage(
                    tooltip = Value)) +
         geom_point(size = 4, alpha = 1) +
         scale_color_manual(values = absolute_color_scale[c(1,3)]) +
-        theme_custom(legend_position = 'right') +
-        theme(legend.text = element_text(size = 16)) +
-      guides(color=guide_legend(nrow = 2, byrow = FALSE))
+        theme_custom(legend_position = 'bottom') +
+        theme(legend.text = element_text(size = 14)) +
+      guides(color=guide_legend(nrow = 1, byrow = TRUE))
       
       legend <- g_legend(p) 
       
@@ -409,6 +464,11 @@ ui <- navbarPage(
                Year == input$year) %>% 
         select(Specialty, Class, Year)
       
+      if(input$matchrate_checkbox) {
+        filtered_programs <- filtered_programs %>% 
+          filter(!(Specialty %in% prelims))
+      }
+      
       p <- filtered_programs %>% 
         left_join(match_rate_table_plot) %>% 
         filter(Class == 'PGY1') %>% 
@@ -416,7 +476,7 @@ ui <- navbarPage(
                    y = Value,
                    fill = Name,
                    tooltip = Value)) +
-        geom_bar_interactive(stat = 'identity', position = 'dodge') +
+        geom_bar_interactive(stat = 'identity', position = 'dodge', color = 'black') +
         labs(x = 'Specialty') +
         theme_custom(legend_position = 'none') +
         scale_fill_manual(values = colors_two) +
@@ -447,7 +507,7 @@ ui <- navbarPage(
                    y = Value,
                    fill = Name,
                    tooltip = Value)) +
-        geom_bar_interactive(stat = 'identity', position = 'dodge') +
+        geom_bar_interactive(stat = 'identity', position = 'dodge', color = 'black') +
         labs(x = 'Specialty') +
         theme_custom(legend_position = 'bottom') +
         scale_fill_manual(values = colors_two) +
@@ -457,7 +517,7 @@ ui <- navbarPage(
       
       ggiraph(ggobj = p, 
               width_svg = 6,
-              height_svg = 6,
+              height_svg = 5,
               options = list(opts_selection(type = "none"),
                              opts_toolbar(saveaspng = FALSE)))
       
@@ -480,6 +540,10 @@ ui <- navbarPage(
                `Positions Offered` > positions,
                `No. of Programs` > programs,
                Class == class)
+      
+      if(input$delta_checkbox) {
+        input_table <- input_table %>% filter(!(Specialty %in% prelims))
+      }
       
       if(group == 'Top') {
         input_table <- input_table %>% 
@@ -507,6 +571,7 @@ ui <- navbarPage(
     
     delta_plot_width <- 6
     delta_plot_height <- 10
+    
     output$plot_delta_pgy1 <- renderGirafe({
       
       p <- delta_plot(class = 'PGY1') +

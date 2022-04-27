@@ -165,7 +165,16 @@ ui <- navbarPage(
            
            fixedRow(
              column(width = 12,
-                    h4('Absolute Numbers', align = 'center'))
+                    h4('Absolute Numbers', align = 'center')
+             )
+           ),
+           fixedRow(
+             column(width = 5,
+                    br()),
+             column(width = 4,
+                    checkboxInput(inputId = 'byyear_absolute_scale',
+                                  label = 'Logarithmic Scale',
+                                  value = TRUE))
            ),
            fixedRow(
              column(width = 6,
@@ -192,7 +201,10 @@ ui <- navbarPage(
            h2('Changes in Match Rate', align = 'center'),
            fixedRow(
              column(width = 12,
-                    'Which specialties saw the largest changes in match rate? Select a timeframe and use the filters to see which specialties had the largest changes.'
+                    'Which specialties saw the greatest changes in their match rate from year to year? 
+                    Select a timeframe and use the filters to see data across all the specialties. 
+                    Negative values indicate a drop in successful matches, while positive numbers indicate an increase.
+                    Hover over the bars to retrieve exact values.'
              ),
            ),
            fixedRow(
@@ -207,7 +219,7 @@ ui <- navbarPage(
                                 selected = '1 Year')),
              column(width = 3,
                     sliderInput(inputId = 'positions',
-                                label = 'Minimum Positions',
+                                label = 'Minimum Positions Offered',
                                 min = 0,
                                 max = 1000, 
                                 value = 10)),
@@ -263,16 +275,16 @@ ui <- navbarPage(
                     column(width = 12,
                            "The National Residenct Matching Program (NRMP) tracks these numbers each year, which they publicly share on their website.
                            I extracted and processed the last 10 years of data to create this interactive tool so medical students can easily visualize data about their intended specialties. 
-                           For example, 2022 witnessed a striking decrease in students applying in Emergency Medicine, as well as a record drop in students who successfully matched in dermatology. 
-                           Hopefully by making these data more accessible, I can help medical students can arm themselves with greater knowledge about the residency match process."),
+                           For example, 2022 witnessed a striking decrease in students applying in Emergency Medicine, as well as a record drop in students who successfully matched in Dermatology. 
+                           I hope that by making this information more accessible, medical students can arm themselves with greater knowledge about the residency match process."),
                     br(),
                     column(width = 12,
                            ''),
                     br(),
                     column(width = 12,
                            
-                           "All of the original data came from public documents published by the NRMP (www.nrmp.org). These visualizations are not officially endorsed by their organization.
-                           I work on this in my free time and pay to host it online, so this page remains in active (but slow) development! Feel free to contact me (dwu@ucsf.edu) if you have any suggestions.")
+                           "All of the original data came from public documents published by the NRMP (www.nrmp.org). 
+                           I work on this in my free time and pay to host it online, so this tool remains in active (but slow) development! Feel free to contact me (dwu@ucsf.edu) if you have any suggestions.")
                     
            )
            
@@ -292,30 +304,31 @@ server <- function(input, output) {
     legend
   } 
   
+  match_abs_table <- long_table_absolute %>%
+    filter(!str_detect(Name, 'Change|Ranked|Programs')) %>% 
+    mutate(Display = paste0(Name, ': ', Value),
+           Name = factor(Name, levels = c('U.S. Senior Applicants',
+                                          'U.S. Senior Matches',
+                                          'Total Applicants',
+                                          'Total Matches',
+                                          'Positions Offered')))
+  
   output$plot_match_abs_pgy1 <- renderGirafe({
     
-    p <- long_table_absolute %>%
+    p <- match_abs_table %>% 
       filter(Specialty %in% input$specialty,
-             Class == 'PGY1',
-             !str_detect(Name, 'Change|Ranked|Programs')) %>% 
-      mutate(Name = factor(Name, levels = c('U.S. Senior Applicants',
-                                            'U.S. Senior Matches',
-                                            'Total Applicants',
-                                            'Total Matches',
-                                            'Positions Offered'))) %>% 
+             Class == 'PGY1') %>% 
       ggplot(aes(x = Year,
                  y = Value,
                  color = Name,
-                 data_id = Name,
-                 tooltip = Value)) +
-      geom_point_interactive(size = 4, alpha = 1) +
+                 data_id = Name)) +
+      geom_point_interactive(size = 4, alpha = 1, aes(tooltip = Display)) +
       geom_line(size = 2, alpha = 0.8) + 
       scale_x_continuous(breaks = years) +
       scale_color_manual(values = absolute_color_scale) +
       labs(y = '# of Applicants',
            title = 'PGY1 Programs') +
-      theme_custom(legend_position = 'none')# +
-    #guides(color=guide_legend(nrow = 2, byrow = FALSE))
+      theme_custom(legend_position = 'none')
     
     girafe(ggobj = p,
            width_svg = 6,
@@ -326,28 +339,20 @@ server <- function(input, output) {
   
   output$plot_match_abs_pgy2 <- renderGirafe({
     
-    p <- long_table_absolute %>%
+    p <- match_abs_table %>% 
       filter(Specialty %in% input$specialty,
-             Class == 'PGY2',
-             !str_detect(Name, 'Change|Ranked|Programs')) %>% 
-      mutate(Name = factor(Name, levels = c('U.S. Senior Applicants',
-                                            'U.S. Senior Matches',
-                                            'Total Applicants',
-                                            'Total Matches',
-                                            'Positions Offered'))) %>% 
+             Class == 'PGY1') %>% 
       ggplot(aes(x = Year,
                  y = Value,
                  color = Name,
-                 data_id = Name,
-                 tooltip = Value)) +
-      geom_point_interactive(size = 4, alpha = 1) +
+                 data_id = Name)) +
+      geom_point_interactive(size = 4, alpha = 1, aes(tooltip = Display)) +
       geom_line(size = 2, alpha = 0.8) + 
       scale_x_continuous(breaks = years) +
       scale_color_manual(values = absolute_color_scale) +
       labs(y = '# of Applicants',
            title = 'PGY2 Programs') +
-      theme_custom(legend_position = 'none') #+
-    #guides(color=guide_legend(nrow = 2, byrow = FALSE))
+      theme_custom(legend_position = 'none')
     
     girafe(ggobj = p,
            width_svg = 6,
@@ -385,27 +390,29 @@ server <- function(input, output) {
   })
   
   ##### MATCH RATE % OVER TIME
+  
+  table_match_ratetime <- long_table_percent %>%
+    filter(!str_detect(Name, 'Change|Ranked|Programs|Filled|Predominance')) %>% 
+    mutate(Display = paste0(str_remove(Name, ' Match Rate %'), ': ', Value, '%'),
+           Name = factor(Name, levels = c('U.S. Senior Match Rate %',
+                                          'Total Match Rate %')))
+    
   output$plot_match_ratetime_pgy1 <- renderGirafe({
     
-    p <- long_table_percent %>%
+    p <- table_match_ratetime %>% 
       filter(Specialty %in% input$specialty,
-             Class == 'PGY1',
-             !str_detect(Name, 'Change|Ranked|Programs|Filled|Predominance')) %>% 
-      mutate(Name = factor(Name, levels = c('U.S. Senior Match Rate %',
-                                            'Total Match Rate %'))) %>% 
+             Class == 'PGY1') %>% 
       ggplot(aes(x = Year,
                  y = Value,
                  color = Name,
-                 data_id = Name,
-                 tooltip = Value)) +
-      geom_point_interactive(size = 4, alpha = 1) +
+                 data_id = Name)) +
+      geom_point_interactive(size = 4, alpha = 1, aes(tooltip = Display)) +
       geom_line(size = 2, alpha = 0.8) + 
       scale_x_continuous(breaks = years) +
       scale_color_manual(values = absolute_color_scale[c(1,3)]) +
       labs(y = 'Match Rate %',
            title = 'PGY1 Programs') +
-      theme_custom(legend_position = 'none') #+
-    #guides(color=guide_legend(nrow = 2, byrow = FALSE))
+      theme_custom(legend_position = 'none')
     
     girafe(ggobj = p,
            width_svg = 6,
@@ -416,25 +423,20 @@ server <- function(input, output) {
   
   output$plot_match_ratetime_pgy2 <- renderGirafe({
     
-    p <- long_table_percent %>%
+    p <- table_match_ratetime %>% 
       filter(Specialty %in% input$specialty,
-             Class == 'PGY2',
-             !str_detect(Name, 'Change|Ranked|Programs|Filled|Predominance')) %>% 
-      mutate(Name = factor(Name, levels = c('U.S. Senior Match Rate %',
-                                            'Total Match Rate %'))) %>% 
+             Class == 'PGY2') %>% 
       ggplot(aes(x = Year,
                  y = Value,
                  color = Name,
-                 data_id = Name,
-                 tooltip = Value)) +
-      geom_point_interactive(size = 4, alpha = 1) +
+                 data_id = Name)) +
+      geom_point_interactive(size = 4, alpha = 1, aes(tooltip = Display)) +
       geom_line(size = 2, alpha = 0.8) + 
       scale_x_continuous(breaks = years) +
       scale_color_manual(values = absolute_color_scale[c(1,3)]) +
       labs(y = 'Match Rate %',
            title = 'PGY2 Programs') +
-      theme_custom(legend_position = 'none') #+
-    #guides(color=guide_legend(nrow = 2, byrow = FALSE))
+      theme_custom(legend_position = 'none')
     
     girafe(ggobj = p,
            width_svg = 6,
@@ -470,7 +472,8 @@ server <- function(input, output) {
   ### MATCH RATE IN A YEAR
   match_rate_table_plot <- match_rate_table %>% 
     filter(Name %in% c('U.S. Senior Match Rate %', 'Total Match Rate %')) %>% 
-    mutate(Name = str_remove(Name, ' Match Rate %')) %>% 
+    mutate(Name = str_remove(Name, ' Match Rate %'),
+           Display = paste0(Name, ': ', Value, '%')) %>% 
     drop_na()
   
   output$plot_match_rate_pgy1 <- renderGirafe({
@@ -492,7 +495,7 @@ server <- function(input, output) {
       ggplot(aes(x = reorder(Specialty, Value),
                  y = Value,
                  fill = Name,
-                 tooltip = Value)) +
+                 tooltip = Display)) +
       geom_bar_interactive(stat = 'identity', position = 'dodge', color = 'black') +
       labs(x = 'Specialty',
            title = 'PGY1 Programs') +
@@ -524,7 +527,7 @@ server <- function(input, output) {
       ggplot(aes(x = reorder(Specialty, Value),
                  y = Value,
                  fill = Name,
-                 tooltip = Value)) +
+                 tooltip = Display)) +
       geom_bar_interactive(stat = 'identity', position = 'dodge', color = 'black') +
       labs(x = 'Specialty',
            title = 'PGY2 Programs') +
@@ -545,11 +548,12 @@ server <- function(input, output) {
   ### ABSOLUTE NUMBERS BY YEAR
   byyear_table <- long_table_absolute %>% 
     filter(!str_detect(Name, 'Change|Ranked|Programs')) %>% 
-    mutate(Name = factor(Name, levels = c('U.S. Senior Applicants',
-                                          'U.S. Senior Matches',
-                                          'Total Applicants',
-                                          'Total Matches',
-                                          'Positions Offered')))
+    mutate(Display = paste0(Name, ': ', Value),
+           Name = factor(Name, levels = rev(c('U.S. Senior Applicants',
+                                              'U.S. Senior Matches',
+                                              'Total Applicants',
+                                              'Total Matches',
+                                              'Positions Offered'))))
   
   output$plot_byyear_absolute_pgy1 <- renderGirafe({
     
@@ -570,16 +574,19 @@ server <- function(input, output) {
       ggplot(aes(x = reorder(Specialty, Value),
                  y = Value,
                  fill = Name,
-                 tooltip = Value)) +
+                 tooltip = Display)) +
       geom_bar_interactive(stat = 'identity', position = 'dodge', color = 'black') +
       labs(x = 'Specialty',
            title = 'PGY1 Programs') +
       theme_custom(legend_position = 'none') +
-      scale_fill_manual(values = absolute_color_scale) +
-      scale_y_log10() +
+      scale_fill_manual(values = rev(absolute_color_scale)) +
       coord_flip() +
       labs(x = '',
            y = 'Number')
+    
+    if(input$byyear_absolute_scale) {
+      p <- p + scale_y_log10()
+    }
     
     ggiraph(ggobj = p,
             width_svg = 6,
@@ -603,17 +610,19 @@ server <- function(input, output) {
       ggplot(aes(x = reorder(Specialty, Value),
                  y = Value,
                  fill = Name,
-                 tooltip = Value)) +
+                 tooltip = Display)) +
       geom_bar_interactive(stat = 'identity', position = 'dodge', color = 'black') +
       labs(x = 'Specialty',
            title = 'PGY2 Programs') +
       theme_custom(legend_position = 'none') +
-      scale_fill_manual(values = absolute_color_scale) +
-      scale_y_log10() +
+      scale_fill_manual(values = rev(absolute_color_scale)) +
       coord_flip() +
       labs(x = '',
            y = 'Number')
     
+    if(input$byyear_absolute_scale) {
+      p <- p + scale_y_log10()
+    }
     
     ggiraph(ggobj = p, 
             width_svg = 6,
@@ -637,7 +646,8 @@ server <- function(input, output) {
                  fill = Name)) +
       theme_custom(legend_position = 'right') +
       geom_bar(stat = 'identity', color = 'black') + 
-      scale_fill_manual(values = absolute_color_scale) +
+      scale_fill_manual(values = rev(absolute_color_scale),
+                        guide = guide_legend(reverse = TRUE)) +
       coord_flip() +
       theme(legend.text = element_text(size = 16))
 
@@ -665,7 +675,8 @@ server <- function(input, output) {
       filter(Timeframe == timeframe,
              `Positions Offered` > positions,
              `No. of Programs` > programs,
-             Class == class)
+             Class == class) %>% 
+      mutate(Display = paste0(`% Change in U.S. Senior Match Rate %`, '%'))
     
     if(input$delta_checkbox) {
       input_table <- input_table %>% filter(!(Specialty %in% prelims))
@@ -683,7 +694,7 @@ server <- function(input, output) {
       ggplot(aes(x = reorder(Specialty, -`% Change in U.S. Senior Match Rate %`),
                  y = `% Change in U.S. Senior Match Rate %`,
                  fill = `% Change in U.S. Senior Match Rate %`,
-                 tooltip = `% Change in U.S. Senior Match Rate %`)) +
+                 tooltip = Display)) +
       geom_bar_interactive(stat = 'identity', color = 'black') +
       labs(x = 'Specialty') +
       theme_custom(legend_position = 'none') +
